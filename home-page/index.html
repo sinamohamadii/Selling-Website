@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>صفحه نخست</title>
+        <link 
+            rel="icon" 
+            href="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/11/cropped-timcheh-192x192.png" 
+            type="image/x-icon" />
+        <script src="./../tailwind/tailwindcdn"></script>
+        <script src="./../tailwind/tailwind.config.js"></script>
+        <link rel="stylesheet" href="./css/main.css" />
+    </head>
+
+    <body>
+        <div id="back_drop" onclick="Sidebar()" class="hidden bg-gray-400 w-screen h-screen bg-opacity-50 z-[1100] fixed top-0 left-0"></div>
+        <section></section>
+        <header class="fixed top-0 left-0 w-full h-auto px-3 shadow-2xl shadow-gray-100 bg-white py-3 z-[900]">
+            <div class="w-full h-auto flex flex-col items-center gap-y-3 md:flex-row md:gap-x-3">
+                <a href="#" class="w-1/2 flex items-center justify-center md:justify-start md:w-[200px]">
+                    <img 
+                        class="w-full h-auto max-w-[240px]" 
+                        src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/demo3logo.svg" 
+                        alt="website-logo" 
+                        />
+                </a>
+                <div class="w-full flex justify-between items-center">
+                    <button class="p-3 bg-gray-100 rounded lg:hidden" onclick="Sidebar()">
+                        <svg width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                    </button>
+                    <nav class="hidden lg:flex gap-x-3 items-center">
+                        <div class="flex flex-col">
+                            دسته بندی کالا ها
+                        </div>
+                        <a class="hover:text-red-500 transition-all duration-100 ease" href="#">وبلاگ</a>
+                        <a class="hover:text-red-500 transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
+                    </nav>
+                    <div class="flex items-center justify-between gap-x-3">
+                        <span class="text-[#f6cd13] inline-block animate-bounce">
+                            <svg width="26" height="26" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                            </svg>
+                        </span>
+                        <span class="text-base inline-block">0216541232</span>
+                    </div>
+                </div>
+                <div class="w-full flex justify-between items-center md:justify-end md:w-fit md:gap-x-3">
+                    <button class="p-3 bg-gray-100 rounded flex gap-x-2 items-center justify-center">
+                        <svg width="22" height="22" fill="currentColor" class="bi bi-person text-gray-600" viewBox="0 0 16 16">
+                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                        </svg>
+                        <div class="flex text-gray-500">
+                            <span class="font-normal border-l border-gray-400 pl-2 ml-2">ورود</span>
+                            <span class="font-normal">عضویت</span>
+                        </div>
+                    </button>
+                    <a href="#" class="w-10 h-10 p-3 rounded bg-[#f6cd13] flex items-center justify-center text-white relative">
+                        <div class="absolute -top-2 -left-2 bg-opacity-90 rounded-full flex justify-center items-center w-5 h-5 bg-gray-700 text-xs">0</div>
+                        <svg width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div id="side_bar" data-toggle="close" class="overflow-auto w-[256px] h-screen p-4 bg-white fixed top-0 -right-full z-[99999] transition-all duration-300 ease-in-out">
+            <div class="flex flex-col gap-y-2">
+                <div class="flex justify-end items-center">
+                    <button onclick="Sidebar()">
+                        <svg width="25" height="25" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-col">
+                    <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                        <span>دسته بندی کالاها</span>
+                        <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="pr-3 text-gray-700 w-full hidden divide-y-2" data-toggle="close">
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>کالای دیجیتال</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    <div class="pr-3 text-gray-700 w-full" data-toggle="close">
+                                        <div class="flex flex-col">
+                                            <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                                <span>کالای دیجیتال</span>
+                                                <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                                hello threre
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="pr-3 text-gray-700 w-full" data-toggle="close">
+                                        <div class="flex flex-col">
+                                            <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                                <span>کالای ورزشی</span>
+                                                <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                                hello threre
+                                            </div>
+                                        </div>
+                                    </div> 
+                                    <div class="pr-3 text-gray-700 w-full" data-toggle="close">
+                                        <div class="flex flex-col">
+                                            <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                                <span>پوشاک</span>
+                                                <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                                hello threre
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>کالای ورزشی</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    hello threre
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>پوشاک</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    hello threre
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+                <a class="hover:text-red-500 transition-all duration-100 ease" href="#">وبلاگ</a>
+                <a class="hover:text-red-500 transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
+            </div>
+        </div>
+        <main></main>
+        <footer></footer>
+
+        <script src="./js/index.js"></script>
+    </body>
+
+</html>

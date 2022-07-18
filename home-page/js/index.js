@@ -1,3 +1,7 @@
+/* use to replace a tag's class */
+replaceClass = (el, from, to) => el.classList.replace(from, to);
+
+
 /* side bar collapse */
 const backDrop = document.querySelector("#back_drop");
 const sideBar = document.querySelector("#side_bar");
@@ -5,32 +9,49 @@ const sideBar = document.querySelector("#side_bar");
 function Sidebar() {
 
     if (sideBar.dataset.toggle === "close") {
-        backDrop.classList.replace("hidden", "block");
-        sideBar.classList.replace("-right-full", "right-0");
+        replaceClass(backDrop, "hidden", "block");
+        replaceClass(sideBar, "-right-full", "right-0");
         sideBar.dataset.toggle = "open";
     } else {
-        backDrop.classList.replace("block", "hidden");
-        sideBar.classList.replace("right-0", "-right-full");
+        replaceClass(backDrop, "block", "hidden");
+        replaceClass(sideBar, "right-0", "-right-full");
         sideBar.dataset.toggle = "close";
     }
 
 }
 
-/* collapse navbar item */
 
+/* collapse navbar items */
 function collapseItem(el) {
-    
+
     const collapseContent = el.nextElementSibling;
     const collapseArrow = el.children[1];
 
     if (collapseContent.dataset.toggle === "close") {
-        collapseContent.classList.replace("hidden", "block");
-        collapseArrow.classList.replace("rotate-0", "rotate-180");
+        replaceClass(collapseContent, "hidden", "block");
+        replaceClass(collapseArrow, "rotate-0", "rotate-180");
         collapseContent.dataset.toggle = "open";
     } else {
-        collapseContent.classList.replace("block", "hidden");
-        collapseArrow.classList.replace("rotate-180", "rotate-0");
+        replaceClass(collapseContent, "block", "hidden");
+        replaceClass(collapseArrow, "rotate-180", "rotate-0");
         collapseContent.dataset.toggle = "close";
     }
+
+}
+
+
+/* use to show navbar items content */
+const itemContent = document.querySelectorAll(".navbar-items-content")
+const navItem = document.querySelectorAll(".nav-item")
+
+function showNavbarContent(el, n) {
+
+    for (let i = 0; i < itemContent.length; i++) {
+        replaceClass(itemContent[i], "block", "hidden");
+        navItem[i].classList.remove("active-nav-item");
+    }
+
+    replaceClass(itemContent[n - 1], "hidden", "block");
+    navItem[n-1].classList.add("active-nav-item");
 
 }

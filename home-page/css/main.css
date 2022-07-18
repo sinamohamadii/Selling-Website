@@ -5,3 +5,12 @@
     scrollbar-color: rgb(156, 156, 156) rgb(209, 209, 209);
     scrollbar-width: thin;
 }
+
+#navbar_item:hover #hover_navbar {
+    display: flex !important;
+}
+
+.active-nav-item{
+    background-color: #fff0f0;
+    color: #ef4444;
+}

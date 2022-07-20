@@ -52,6 +52,25 @@ function showNavbarContent(el, n) {
     }
 
     replaceClass(itemContent[n - 1], "hidden", "block");
-    navItem[n-1].classList.add("active-nav-item");
+    navItem[n - 1].classList.add("active-nav-item");
 
 }
+
+
+/* navbar vertical slider */
+const navbarSliderContainer = document.querySelector("#navbar-slider-container");
+
+const interval = setInterval(function () {
+
+    const navbarSliderLastChild = navbarSliderContainer.lastChild;
+    navbarSliderContainer.prepend(navbarSliderLastChild);
+
+    let i;
+    for (i = 0; i < navbarSliderContainer.children.length; i++) {
+        navbarSliderContainer.children[i].classList.remove("blur-[2px]", "blur-none");
+        navbarSliderContainer.children[i].classList.add("blur-[2px]");
+    }
+
+    navbarSliderContainer.children[1].classList.add("blur-none");
+
+}, 3000);

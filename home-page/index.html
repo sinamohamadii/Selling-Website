@@ -19,7 +19,7 @@
     <body>
         <div id="back_drop" onclick="Sidebar()" class="hidden bg-gray-400 w-screen h-screen bg-opacity-50 z-[1100] fixed top-0 left-0">
         </div>        
-        <header class="sticky top-0 left-0 w-full h-auto px-3 shadow-2xl shadow-gray-100 bg-white py-3 lg:py-0 lg:h-[72px] z-[900]">
+        <nav class="sticky top-0 left-0 w-full h-auto px-3 shadow-2xl shadow-gray-100 bg-white py-3 lg:py-0 lg:h-[72px] z-[900]">
             <div class="w-full h-auto flex flex-col items-center gap-y-3 md:flex-row md:gap-x-3 lg:h-full">
                 <a href="#" class="w-1/2 flex items-center justify-center md:justify-start md:w-[200px]">
                     <img 
@@ -34,24 +34,24 @@
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                         </svg>
                     </button>
-                    <nav class="hidden lg:flex gap-x-3 items-center h-full">
+                    <div class="hidden lg:flex gap-x-3 items-center h-full">
                         <div id="navbar_item" class="flex flex-col h-full items-center justify-center">
                             <div class="hover:text-[#e1ba07] flex gap-x-2 items-center transition-all duration-100 ease cursor-pointer h-full">
                                 <span class="h-full flex items-center justify-center">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
+                                    <svg width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
                                     </svg>
                                 </span>
                                 <span class="h-full flex items-center justify-center">دسته بندی کالاها</span>
                             </div>
-                            <div id="hover_navbar" class="hidden fixed top-[72px] right-0 py-3 shadow w-screen h-auto rounded bg-white text-gray-600 max-h-[427px] overflow-hidden">
+                            <div id="hover_navbar" class="hidden fixed top-[72px] right-0 py-3 shadow w-full h-auto rounded bg-white text-gray-600 max-h-[427px] overflow-hidden">
                                 <div class="flex flex-col gap-y-3 h-auto w-[20%] min-w-fit px-2">
                                     <a 
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 1)" 
                                         class="nav-item active-nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
                                         <span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
+                                            <svg width="16" height="16" fill="currentColor" class="bi bi-laptop" viewBox="0 0 16 16">
                                                 <path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
                                             </svg>
                                         </span>
@@ -62,7 +62,7 @@
                                         onmouseover="showNavbarContent(this, 2)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
                                         <span>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
+                                            <svg width="16" height="16" fill="currentColor" class="bi bi-wrench-adjustable" viewBox="0 0 16 16">
                                                 <path d="M16 4.5a4.492 4.492 0 0 1-1.703 3.526L13 5l2.959-1.11c.027.2.041.403.041.61Z"/>
                                                 <path d="M11.5 9c.653 0 1.273-.139 1.833-.39L12 5.5 11 3l3.826-1.53A4.5 4.5 0 0 0 7.29 6.092l-6.116 5.096a2.583 2.583 0 1 0 3.638 3.638L9.908 8.71A4.49 4.49 0 0 0 11.5 9Zm-1.292-4.361-.596.893.809-.27a.25.25 0 0 1 .287.377l-.596.893.809-.27.158.475-1.5.5a.25.25 0 0 1-.287-.376l.596-.893-.809.27a.25.25 0 0 1-.287-.377l.596-.893-.809.27-.158-.475 1.5-.5a.25.25 0 0 1 .287.376ZM3 14a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z"/>
                                             </svg>
@@ -207,7 +207,7 @@
                         </div>
                         <a class="hover:text-[#e1ba07] transition-all duration-100 ease" href="#">وبلاگ</a>
                         <a class="hover:text-[#e1ba07] transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
-                    </nav>
+                    </div>
                     <div class="flex items-center justify-between gap-x-3">
                         <span class="text-[#f6cd13] inline-block animate-bounce">
                             <svg width="26" height="26" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
@@ -235,7 +235,7 @@
                     </a>
                 </div>
             </div>
-        </header>
+        </nav>
         <div 
             id="side_bar" 
             data-toggle="close" 
@@ -252,7 +252,7 @@
                     <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                         <span>دسته بندی کالاها</span>
                         <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                             </svg>
                         </span>
@@ -263,7 +263,7 @@
                                 <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                                     <span>کالای دیجیتال</span>
                                     <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                         </svg>
                                     </span>
@@ -274,7 +274,7 @@
                                             <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                                                 <span>کالای دیجیتال</span>
                                                 <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                    <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                                     </svg>
                                                 </span>
@@ -289,7 +289,7 @@
                                             <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                                                 <span>کالای ورزشی</span>
                                                 <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                    <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                                     </svg>
                                                 </span>
@@ -304,7 +304,7 @@
                                             <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                                                 <span>پوشاک</span>
                                                 <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                    <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                                     </svg>
                                                 </span>
@@ -322,7 +322,7 @@
                                 <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                                     <span>کالای ورزشی</span>
                                     <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                         </svg>
                                     </span>
@@ -337,7 +337,7 @@
                                 <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
                                     <span>پوشاک</span>
                                     <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
                                         </svg>
                                     </span>
@@ -353,42 +353,340 @@
                 <a class="hover:text-red-500 transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
             </div>
         </div>
-        <main>
-            <section class="w-full h-auto py-5 text-white px-3">
-                <div class="w-full flex flex-col md:flex-row md:items-start items-center justify-center">
-                    <div class="flex flex-col gap-y-7 w-full md:gap-y-12">
-                        <div class="w-full flex items-center bg-gray-100 rounded-md h-12 md:max-w-[375px]">
-                            <div class="w-fit px-5 text-gray-900">
-                                <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                                </svg>
-                            </div>
-                            <input type="text" class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" placeholder="جستجو در محصولات" />
-                            <div class="w-fit px-5 text-gray-900">
-                                <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                </svg>
-                            </div>
+        <header class="w-full h-auto py-5 text-white px-3 mb-24">
+            <div class="w-full flex flex-col md:flex-row md:items-start items-center justify-center">
+                <div class="flex flex-col gap-y-7 w-full md:gap-y-12">
+                    <div class="w-full flex items-center bg-gray-100 rounded-md h-12 md:max-w-[375px]">
+                        <div class="w-fit px-5 text-gray-900">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                            </svg>
                         </div>
-                        <div class="text-gray-600">
-                            <h2>
-                                شرکت گارانتی محصولات تیمچه
-                            </h2>
+                        <input type="text" class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" placeholder="جستجو در محصولات" />
+                        <div class="w-fit px-5 text-gray-900">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                            </svg>
                         </div>
-                        <div class="text-black font-bold text-4xl">
-                            <h1>
-                                گارانتی تیمچه با تکنسین های مجرب مشکل دستگاه شما را سریع حل میکنند.
-                            </h1>
-                        </div>
-                        <button class="px-7 py-3 rounded bg-[#f6cd13] text-white max-w-fit">درخواست مشاوره</button>
                     </div>
-                    <div class="w-full h-auto">
-                        <img 
-                            src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2022/01/tecimac.jpg" 
-                            alt="hero-image"
-                            class="w-full h-auto"
-                            />
+                    <div class="text-gray-600">
+                        <h2>
+                            شرکت گارانتی محصولات تیمچه
+                        </h2>
                     </div>
+                    <div class="">
+                        <h1 class="text-black font-bold transition-all duration-300 ease-in-out text-xl xs:text-2xl md:!text-3xl">
+                            گارانتی تیمچه با تکنسین های مجرب مشکل دستگاه شما را سریع حل میکنند.
+                        </h1>
+                    </div>
+                    <button class="px-7 py-3 rounded bg-[#f6cd13] text-white max-w-fit">درخواست مشاوره</button>
+                </div>
+                <div class="w-full h-auto">
+                    <img 
+                        src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2022/01/tecimac.jpg" 
+                        alt="hero-image"
+                        class="w-full h-auto"
+                        />
+                </div>
+            </div>
+        </header>
+        <main class="flex flex-col gap-y-24">
+            <section class="flex flex-col gap-y-5 justify-center items-center w-full h-auto">
+                <h3 class="text-2xl font-bold">خدمات ما</h3>
+                <h4 class="text-md font-medium text-gray-400">با خدمات شرکت گارانتی محصولات تیمچه آشنا شویم</h4>
+                <div class="flex flex-wrap w-full gap-y-3">
+                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
+                        <div class="w-full flex flex-col gap-y-4 rounded shadow p-4">
+                            <span>
+                                <img 
+                                    width="50px"
+                                    height="50px" 
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/003-shopping-basket.svg" 
+                                    alt="world in bucket" 
+                                    />
+                            </span>
+                            <a href="#" class="w-fit">
+                                ارسال به تمامی شهرها
+                            </a>
+                            <p class="text-gray-500 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است</p>
+                            <a href="#" class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#f6cd13] hover:scale-125 transition-all duration-200 ease-in-out">
+                               <span>مشاهده</span> 
+                               <span class="mt-1">
+                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                               </span> 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
+                        <div class="w-full flex flex-col gap-y-4 rounded shadow p-4">
+                            <span>
+                                <img 
+                                    width="50px"
+                                    height="50px" 
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/016-tracking.svg" 
+                                    alt="world in bucket" 
+                                    />
+                            </span>
+                            <a href="#" class="w-fit">
+                                امکان تحویل اکسپرس
+                            </a>
+                            <p class="text-gray-500 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است</p>
+                            <a href="#" class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#f6cd13] hover:scale-125 transition-all duration-200 ease-in-out">
+                               <span>مشاهده</span> 
+                               <span class="mt-1">
+                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                               </span> 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
+                        <div class="w-full flex flex-col gap-y-4 rounded shadow p-4">
+                            <span>
+                                <img 
+                                    width="50px"
+                                    height="50px" 
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/013-pos-terminal.svg" 
+                                    alt="world in bucket" 
+                                    />
+                            </span>
+                            <a href="#" class="w-fit">
+                                امکان پرداخت در محل
+                            </a>
+                            <p class="text-gray-500 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است</p>
+                            <a href="#" class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#f6cd13] hover:scale-125 transition-all duration-200 ease-in-out">
+                               <span>مشاهده</span> 
+                               <span class="mt-1">
+                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                               </span> 
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
+                        <div class="w-full flex flex-col gap-y-4 rounded shadow p-4">
+                            <span>
+                                <img 
+                                    width="50px"
+                                    height="50px" 
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/043-discount.svg" 
+                                    alt="world in bucket" 
+                                    />
+                            </span>
+                            <a href="#" class="w-fit">
+                                ضمانت اصل بودن کالا
+                            </a>
+                            <p class="text-gray-500 text-sm">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است</p>
+                            <a href="#" class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#f6cd13] hover:scale-125 transition-all duration-200 ease-in-out">
+                               <span>مشاهده</span> 
+                               <span class="mt-1">
+                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                    </svg>
+                               </span> 
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="flex flex-col gap-y-5 justify-center items-center w-full h-auto">
+                <h3 class="text-2xl font-bold">محصولات ما</h3>
+                <h4 class="text-md font-medium text-gray-400">با محصولات تیمچه آشنا شویم</h4>
+                <div id="product_container" class="w-full flex flex-wrap gap-y-2">
+                    <div class="w-full h-auto px-2 md:w-1/2">
+                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
+                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
+                                <img 
+                                    class="w-[105px] h-[105px]"
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/10/ipad3-300x300.jpg" 
+                                    alt="product photo" 
+                                    />
+                            </a>
+                            <div class="w-full flex justify-between items-center">
+                                <div class="flex flex-col gap-y-2">
+                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">آیپد مینی 2021 ظرفیت 64 گیگابایت</a>
+                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">2021 Apple iPad Mini (Wi-Fi, 64GB)</a>
+                                    <div class="flex gap-x-3">
+                                        <span class="bg-[#f9c659] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
+                                            7%
+                                        </span>
+                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                    </div>
+                                </div>
+                                <a 
+                                    href="#" 
+                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#f9c659] hover:bg-[#f9c659] hover:text-white">
+                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-auto px-2 md:w-1/2">
+                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
+                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
+                                <img 
+                                    class="w-[105px] h-[105px]"
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/10/nike1-300x300.jpg" 
+                                    alt="product photo" 
+                                    />
+                            </a>
+                            <div class="w-full flex justify-between items-center">
+                                <div class="flex flex-col gap-y-2">
+                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">آیپد مینی 2021 ظرفیت 64 گیگابایت</a>
+                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">2021 Apple iPad Mini (Wi-Fi, 64GB)</a>
+                                    <div class="flex gap-x-3">
+                                        <span class="bg-[#f9c659] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
+                                            7%
+                                        </span>
+                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                    </div>
+                                </div>
+                                <a 
+                                    href="#" 
+                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#f9c659] hover:bg-[#f9c659] hover:text-white">
+                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-auto px-2 md:w-1/2">
+                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
+                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
+                                <img 
+                                    class="w-[105px] h-[105px]"
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/10/buds1-300x300.jpg" 
+                                    alt="product photo" 
+                                    />
+                            </a>
+                            <div class="w-full flex justify-between items-center">
+                                <div class="flex flex-col gap-y-2">
+                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">آیپد مینی 2021 ظرفیت 64 گیگابایت</a>
+                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">2021 Apple iPad Mini (Wi-Fi, 64GB)</a>
+                                    <div class="flex gap-x-3">
+                                        <span class="bg-[#f9c659] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
+                                            7%
+                                        </span>
+                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                    </div>
+                                </div>
+                                <a 
+                                    href="#" 
+                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#f9c659] hover:bg-[#f9c659] hover:text-white">
+                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-auto px-2 md:w-1/2">
+                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
+                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
+                                <img 
+                                    class="w-[105px] h-[105px]"
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/10/soshert3-300x300.jpg" 
+                                    alt="product photo" 
+                                    />
+                            </a>
+                            <div class="w-full flex justify-between items-center">
+                                <div class="flex flex-col gap-y-2">
+                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">آیپد مینی 2021 ظرفیت 64 گیگابایت</a>
+                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">2021 Apple iPad Mini (Wi-Fi, 64GB)</a>
+                                    <div class="flex gap-x-3">
+                                        <span class="bg-[#f9c659] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
+                                            7%
+                                        </span>
+                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                    </div>
+                                </div>
+                                <a 
+                                    href="#" 
+                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#f9c659] hover:bg-[#f9c659] hover:text-white">
+                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-auto px-2 md:w-1/2">
+                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
+                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
+                                <img 
+                                    class="w-[105px] h-[105px]"
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/61i8Vjb17SL._FMjpg-300x300.jpg" 
+                                    alt="product photo" 
+                                    />
+                            </a>
+                            <div class="w-full flex justify-between items-center">
+                                <div class="flex flex-col gap-y-2">
+                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">آیپد مینی 2021 ظرفیت 64 گیگابایت</a>
+                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">2021 Apple iPad Mini (Wi-Fi, 64GB)</a>
+                                    <div class="flex gap-x-3">
+                                        <span class="bg-[#f9c659] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
+                                            7%
+                                        </span>
+                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                    </div>
+                                </div>
+                                <a 
+                                    href="#" 
+                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#f9c659] hover:bg-[#f9c659] hover:text-white">
+                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full h-auto px-2 md:w-1/2">
+                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
+                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
+                                <img 
+                                    class="w-[105px] h-[105px]"
+                                    src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/10/macbook2-300x300.jpg" 
+                                    alt="product photo" 
+                                    />
+                            </a>
+                            <div class="w-full flex justify-between items-center">
+                                <div class="flex flex-col gap-y-2">
+                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">آیپد مینی 2021 ظرفیت 64 گیگابایت</a>
+                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">2021 Apple iPad Mini (Wi-Fi, 64GB)</a>
+                                    <div class="flex gap-x-3">
+                                        <span class="bg-[#f9c659] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
+                                            7%
+                                        </span>
+                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                    </div>
+                                </div>
+                                <a 
+                                    href="#" 
+                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#f9c659] hover:bg-[#f9c659] hover:text-white">
+                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button 
+                    onclick="moreProduct()" 
+                    class="text-black bg-[#f7f7f7] hover:text-white hover:bg-[#f9c659] p-4 rounded-3xl text-sm transition-all duration-200 ease-in">
+                    محصولات بیشتر...
+                </button>
+            </section>
+            <section class="w-screen h-auto bg-[#f9c659]">
+                <div class="flex flex-col items-center justify-center">
+                    hello there
                 </div>
             </section>
         </main>

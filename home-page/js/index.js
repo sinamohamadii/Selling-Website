@@ -1,5 +1,5 @@
 /* use to replace a tag's class */
-replaceClass = (el, from, to) => el.classList.replace(from, to);
+// replaceClass = (el, from, to) => el.classList.replace(from, to);
 
 
 /* side bar collapse */
@@ -74,3 +74,20 @@ const interval = setInterval(function () {
     navbarSliderContainer.children[1].classList.add("blur-none");
 
 }, 3000);
+
+
+/* use to duplicate products */
+const productContainer = document.querySelector("#product_container");
+let count = 0;
+
+function moreProduct() {
+
+    if (count < 2) {
+        productContainer.innerHTML += productContainer.innerHTML;
+        count++;
+    }
+    else {
+        alert("There are no more products...");
+    }
+
+}

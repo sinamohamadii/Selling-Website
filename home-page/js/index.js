@@ -1,5 +1,5 @@
 /* use to replace a tag's class */
-// replaceClass = (el, from, to) => el.classList.replace(from, to);
+replaceClass = (el, from, to) => el.classList.replace(from, to);
 
 
 /* side bar collapse */

@@ -91,3 +91,26 @@ function moreProduct() {
     }
 
 }
+
+/* mouse tracking with pure js */
+let pointerX;
+let pointerY;
+const monitorPhoto = document.querySelector("#monitor_photo");
+
+document.onmousemove = function (event) {
+
+    pointerX = event.clientX;
+    pointerY = event.clientY;
+
+}
+
+setInterval(pointerCheck, 1000);
+function pointerCheck() {
+
+    let screenW = window.innerWidth;
+    let screenH = window.innerHeight;
+    // console.log('Cursor at: ' + pointerX + ', ' + pointerY);
+    // console.log(screenW);
+    // console.log(screenH);
+
+}

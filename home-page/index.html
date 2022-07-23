@@ -9,10 +9,18 @@
         <link 
             rel="icon" 
             href="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/11/cropped-timcheh-192x192.png" 
-            type="image/x-icon" />
+            type="image/x-icon" 
+            />
         <script src="./../tailwind/tailwindcdn"></script>
         <script src="./../tailwind/tailwind.config.js"></script>
         <link rel="stylesheet" href="./css/main.css" />
+        <link rel="stylesheet" href="./../font/yekan.css" />
+        <link 
+            rel="stylesheet" 
+            href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+            integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+            crossorigin="anonymous" 
+            />
         <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     </head>
 
@@ -22,11 +30,7 @@
         <nav class="sticky top-0 left-0 w-full h-auto px-3 shadow-2xl shadow-gray-100 bg-white py-3 lg:py-0 lg:h-[72px] z-[900]">
             <div class="w-full h-auto flex flex-col items-center gap-y-3 md:flex-row md:gap-x-3 lg:h-full">
                 <a href="#" class="w-1/2 flex items-center justify-center md:justify-start md:w-[200px]">
-                    <img 
-                        class="w-full h-auto max-w-[240px]" 
-                        src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/demo3logo.svg" 
-                        alt="website-logo" 
-                        />
+                    پیاده سازی شده توسط سینا محمدی
                 </a>
                 <div class="w-full flex justify-between items-center lg:h-full">
                     <button class="p-3 bg-gray-100 rounded lg:hidden" onclick="Sidebar()">
@@ -35,7 +39,7 @@
                         </svg>
                     </button>
                     <div class="hidden lg:flex gap-x-3 items-center h-full">
-                        <div id="navbar_item" class="flex flex-col h-full items-center justify-center">
+                        <div class="navbar-item flex flex-col h-full items-center justify-center">
                             <div class="hover:text-[#e1ba07] flex gap-x-2 items-center transition-all duration-100 ease cursor-pointer h-full">
                                 <span class="h-full flex items-center justify-center">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
@@ -44,7 +48,7 @@
                                 </span>
                                 <span class="h-full flex items-center justify-center">دسته بندی کالاها</span>
                             </div>
-                            <div id="hover_navbar" class="hidden fixed top-[72px] right-0 py-3 shadow w-full h-auto rounded bg-white text-gray-600 max-h-[427px] overflow-hidden">
+                            <div class="hover-navbar hidden fixed top-[72px] right-0 py-3 shadow w-full h-auto rounded bg-white text-gray-600 max-h-[427px] overflow-hidden">
                                 <div class="flex flex-col gap-y-3 h-auto w-[20%] min-w-fit px-2">
                                     <a 
                                         href="#" 
@@ -73,37 +77,54 @@
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 3)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
-
+                                        <span>
+                                            <i class="fas fa-tshirt"></i>
+                                        </span>
                                         <span>مد و پوشاک</span>
                                     </a>
                                     <a 
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 4)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
+                                        <span>
+                                            <i aria-hidden="true" class="fas fa-baby-carriage"></i>
+                                        </span>
                                         اسباب بازی، کودک و نوزاد
                                     </a>
                                     <a 
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 5)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
+                                        <span>
+                                            <i aria-hidden="true" class="fas fa-heart"></i>
+                                        </span>
                                         زیبایی و سلامت
                                     </a>
                                     <a 
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 6)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
+                                        <span>
+                                            <i aria-hidden="true" class="fas fa-chair"></i>
+                                        </span>
                                         خانه و اشپزخانه
                                     </a>
                                     <a 
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 7)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
+                                        <span>
+                                            <i aria-hidden="true" class="fas fa-book"></i>
+                                        </span>
                                         کتاب، لوازم تحریر و هنر
                                     </a>
                                     <a 
                                         href="#" 
                                         onmouseover="showNavbarContent(this, 8)" 
                                         class="nav-item hover:text-red-500 hover:bg-[#fff0f0] transition-all duration-100 ease rounded p-2 flex items-center gap-x-2">
+                                        <span>
+                                            <i aria-hidden="true" class="fas fa-volleyball-ball"></i>
+                                        </span>
                                         ورزش و سفر
                                     </a>
                                 </div>
@@ -207,6 +228,21 @@
                         </div>
                         <a class="hover:text-[#e1ba07] transition-all duration-100 ease" href="#">وبلاگ</a>
                         <a class="hover:text-[#e1ba07] transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
+                        <div class="navbar-item transition-all duration-100 ease cursor-pointer relative flex flex-col h-full items-center justify-center">
+                            <div class="hover:text-[#e1ba07] flex items-center">تمام صفحات این پروژه</div>
+                            <div class="hover-navbar absolute hidden w-[200px] p-3 top-[72px] rounded bg-white gap-y-2 flex-col shadow-xl">
+                                <a href="#" class="hover:text-[#e1ba07]">صفحه نخست شرکتی</a>
+                                <a href="#" class="hover:text-[#e1ba07]">صفحه نخست فروشگاهی</a>
+                                <a href="#" class="hover:text-[#e1ba07]">حساب کاربری</a>
+                                <a href="#" class="hover:text-[#e1ba07]">سبد خرید</a>
+                                <a href="#" class="hover:text-[#e1ba07]">صفحه محصول</a>
+                                <a href="#" class="hover:text-[#e1ba07]">وبلاگ</a>
+                                <a href="#" class="hover:text-[#e1ba07]">برند ها</a>
+                                <a href="#" class="hover:text-[#e1ba07]">پیشنهادهای ویژه</a>
+                                <a href="#" class="hover:text-[#e1ba07]">تماس با ما</a>
+                                <a href="#" class="hover:text-[#e1ba07]">درباره ما</a>
+                            </div>
+                        </div>
                     </div>
                     <div class="flex items-center justify-between gap-x-3">
                         <span class="text-[#f6cd13] inline-block animate-bounce">
@@ -269,58 +305,14 @@
                                     </span>
                                 </button>
                                 <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
-                                    <div class="pr-3 text-gray-700 w-full" data-toggle="close">
-                                        <div class="flex flex-col">
-                                            <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
-                                                <span>کالای دیجیتال</span>
-                                                <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                                    <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                            <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
-                                                hello threre
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <div class="pr-3 text-gray-700 w-full" data-toggle="close">
-                                        <div class="flex flex-col">
-                                            <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
-                                                <span>کالای ورزشی</span>
-                                                <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                                    <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                            <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
-                                                hello threre
-                                            </div>
-                                        </div>
-                                    </div> 
-                                    <div class="pr-3 text-gray-700 w-full" data-toggle="close">
-                                        <div class="flex flex-col">
-                                            <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
-                                                <span>پوشاک</span>
-                                                <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
-                                                    <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                                                    </svg>
-                                                </span>
-                                            </button>
-                                            <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
-                                                hello threre
-                                            </div>
-                                        </div>
-                                    </div> 
+                                    محتوای کالای دیجیتال
                                 </div>
                             </div>
                         </div> 
                         <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
                             <div class="flex flex-col">
                                 <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
-                                    <span>کالای ورزشی</span>
+                                    <span>خودرو و تجهیزات جانبی</span>
                                     <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
                                         <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
@@ -328,14 +320,14 @@
                                     </span>
                                 </button>
                                 <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
-                                    hello threre
+                                    محتوای خودرو و تجهیزات جانبی
                                 </div>
                             </div>
                         </div> 
                         <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
                             <div class="flex flex-col">
                                 <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
-                                    <span>پوشاک</span>
+                                    <span>مد و پوشاک</span>
                                     <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
                                         <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                                             <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
@@ -343,10 +335,109 @@
                                     </span>
                                 </button>
                                 <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
-                                    hello threre
+                                    محتوای مد و پوشاک
                                 </div>
                             </div>
                         </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>اسباب بازی، کودک و نوزاد</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    محتوای اسباب بازی، کودک و نوزاد
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>زیبایی و سلامت</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    محتوای زیبایی و سلامت
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>خانه و اشپزخانه</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    محتوای خانه و اشپزخانه
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>کتاب، لوازم تحریر و هنر</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    محتوای کتاب، لوازم تحریر و هنر
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="pr-3 text-gray-700 w-full py-2" data-toggle="close">
+                            <div class="flex flex-col">
+                                <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                                    <span>ورزش و سفر</span>
+                                    <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                                        <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                        </svg>
+                                    </span>
+                                </button>
+                                <div class="pr-3 text-gray-600 w-full hidden" data-toggle="close">
+                                    محتوای ورزش و سفر
+                                </div>
+                            </div>
+                        </div> 
+                    </div> 
+                </div>
+                <div class="flex flex-col">
+                    <button onclick="collapseItem(this)" class="flex justify-between hover:text-red-500 transition-all duration-100 ease">
+                        <span>تمام صفحات این پروژه</span>
+                        <span class="collapse-arrow rotate-0 transition-all duration-100 ease">
+                            <svg width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="pr-3 text-gray-700 w-full hidden" data-toggle="close">
+                        <div class="flex flex-col gap-y-3 mt-3">
+                            <a href="#" class="hover:text-[#e1ba07]">صفحه نخست شرکتی</a>
+                            <a href="#" class="hover:text-[#e1ba07]">صفحه نخست فروشگاهی</a>
+                            <a href="#" class="hover:text-[#e1ba07]">حساب کاربری</a>
+                            <a href="#" class="hover:text-[#e1ba07]">سبد خرید</a>
+                            <a href="#" class="hover:text-[#e1ba07]">صفحه محصول</a>
+                            <a href="#" class="hover:text-[#e1ba07]">وبلاگ</a>
+                            <a href="#" class="hover:text-[#e1ba07]">برند ها</a>
+                            <a href="#" class="hover:text-[#e1ba07]">پیشنهادهای ویژه</a>
+                            <a href="#" class="hover:text-[#e1ba07]">تماس با ما</a>
+                            <a href="#" class="hover:text-[#e1ba07]">درباره ما</a>
+                        </div>
                     </div> 
                 </div>
                 <a class="hover:text-red-500 transition-all duration-100 ease" href="#">وبلاگ</a>

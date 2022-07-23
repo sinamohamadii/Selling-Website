@@ -5,8 +5,11 @@
     scrollbar-color: rgb(156, 156, 156) rgb(209, 209, 209);
     scrollbar-width: thin;
 }
+body{
+    font: 12pt/2 Yekan, sans-serif;
+}
 
-#navbar_item:hover #hover_navbar {
+.navbar-item:hover .hover-navbar {
     display: flex !important;
 }
 

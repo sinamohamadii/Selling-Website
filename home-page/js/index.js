@@ -105,3 +105,24 @@ document.onmousemove = function (event) {
     monitorPhoto.style.top = y;
 
 }
+
+
+/* to open the select option in header search input */
+const selectDropDown = document.querySelector("#select_drop_down");
+let selectDropDownToggle = selectDropDown.dataset.collapse;
+
+function openSelect() {
+    console.log("doine");
+    if (selectDropDownToggle === "false") {
+        replaceClass(selectDropDown, "hidden", "flex");
+        selectDropDownToggle = "true";
+        console.log("true");
+    }
+    else  {
+        replaceClass(selectDropDown, "flex", "hidden");
+        selectDropDownToggle = "false";
+        console.log("false");
+
+    }
+
+}

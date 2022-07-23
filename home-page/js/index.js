@@ -93,24 +93,15 @@ function moreProduct() {
 }
 
 /* mouse tracking with pure js */
-let pointerX;
-let pointerY;
 const monitorPhoto = document.querySelector("#monitor_photo");
 
 document.onmousemove = function (event) {
 
-    pointerX = event.clientX;
-    pointerY = event.clientY;
+    let x = (event.clientX * -10) / window.innerWidth + 55 + "%";
+    let y = (event.clientY * -10) / window.innerWidth + 15 + "%";
 
-}
-
-setInterval(pointerCheck, 1000);
-function pointerCheck() {
-
-    let screenW = window.innerWidth;
-    let screenH = window.innerHeight;
-    // console.log('Cursor at: ' + pointerX + ', ' + pointerY);
-    // console.log(screenW);
-    // console.log(screenH);
+    monitorPhoto.style.transition = "0s";
+    monitorPhoto.style.left = x;
+    monitorPhoto.style.top = y;
 
 }

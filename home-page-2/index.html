@@ -31,11 +31,12 @@
             class="hidden bg-gray-400 w-screen h-screen bg-opacity-50 z-[1100] fixed top-0 left-0">
         </div>        
         <nav class="sticky top-0 left-0 w-full h-auto px-3 shadow-2xl shadow-gray-100 bg-white py-3 lg:py-0 lg:h-[72px] z-[900]">
-            <div class="relative w-full h-auto flex flex-col items-center gap-y-3 md:flex-row md:gap-x-3 lg:h-full">
+            <div class="relative w-full h-full flex flex-col items-center gap-y-3 md:flex-row md:gap-x-3 lg:h-full">
                 <a href="#" class="w-1/2 flex items-center justify-center md:justify-start md:w-[200px]">
                     پیاده سازی شده توسط سینا محمدی
                 </a>
-                <div class="w-full flex justify-between items-center lg:h-full">
+                <div class="h-full w-full flex justify-between items-center">
+                    <div class="w-fit flex justify-start items-center lg:h-full">
                     <button class="p-3 bg-gray-100 rounded lg:hidden" onclick="Sidebar()">
                         <svg width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -237,9 +238,9 @@
                         <a class="hover:text-[#00B4D8] transition-all duration-100 ease" href="#">وبلاگ</a>
                         <a class="hover:text-[#00B4D8] transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
                         <div class="navbar-item transition-all duration-100 ease cursor-pointer relative flex flex-col h-full items-center justify-center">
-                            <div class="hover:text-[#00B4D8] flex items-center">تمام صفحات این پروژه</div>
+                            <div class="hover:text-[#00B4D8] flex items-center h-full">تمام صفحات این پروژه</div>
                             <div class="hover-navbar absolute hidden w-[200px] p-3 top-[72px] rounded bg-white gap-y-2 flex-col shadow-xl">
-                                <a href="#" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
+                                <a href="./../home-page/index.html" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
                                 <a href="#" class="hover:text-[#00B4D8]">صفحه نخست فروشگاهی</a>
                                 <a href="#" class="hover:text-[#00B4D8]">حساب کاربری</a>
                                 <a href="#" class="hover:text-[#00B4D8]">سبد خرید</a>
@@ -252,34 +253,75 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between gap-x-3">
-                        <span class="text-[#00B4D8] inline-block animate-bounce">
-                            <svg width="26" height="26" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                        </span>
-                        <span class="text-base inline-block">09015165671</span>
+                    </div>
+                    <div class="w-full flex items-center justify-end md:w-fit md:gap-x-3 pr-4">
+                        <div class="w-full hidden xs:flex items-center bg-gray-100 rounded-3xl h-12 md:max-w-[375px] relative">
+                            <button onclick="openSelect()" class="w-fit px-5 text-gray-900">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </button>
+                            <input 
+                                type="text" 
+                                class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" 
+                                placeholder="جستجو در محصولات" 
+                                />
+                            <button class="w-fit px-5 text-gray-900">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                            <div 
+                                id="select_drop_down" 
+                                data-collapse="false"
+                                class="hidden w-[200px] h-auto py-4 rounded flex-col absolute bg-white top-12 text-black shadow-xl">
+                                <input type="text" class="w-auto focus:outline-none bg-gray-100 rounded mx-2 text-gray-900"/>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">همه</button>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">مد و پوشاک</button>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">کالای دیجیتال</button>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">ارایشی و سلامت</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-3 xs:pr-4">
+                            <div class="bg-gray-100 flex justify-center items-center rounded-2xl w-12 h-12">
+                                <svg width="22" height="22" fill="currentColor" class="bi bi-person text-gray-600" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                            </div>
+                            <div class="bg-[#fd6564] text-white flex justify-center items-center rounded-2xl w-12 h-12">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full flex justify-between items-center md:justify-end md:w-fit md:gap-x-3">
-                    <button class="hover:shadow-md shadow active:shadow-lg p-3 bg-gray-100 rounded flex gap-x-2 items-center justify-center">
-                        <svg width="22" height="22" fill="currentColor" class="bi bi-person text-gray-600" viewBox="0 0 16 16">
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                <div class="w-full flex xs:hidden items-center bg-gray-100 rounded-3xl h-12 md:max-w-[375px] relative">
+                    <button onclick="openSelect()" class="w-fit px-5 text-gray-900">
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                         </svg>
-                        <div class="flex text-gray-500">
-                            <span class="font-normal border-l border-gray-400 pl-2 ml-2">ورود</span>
-                            <span class="font-normal">عضویت</span>
-                        </div>
                     </button>
-                    <a href="#" class="w-10 h-10 p-3 rounded bg-[#00B4D8] hover:bg-[#48CAE4] transition-all duration-200 flex items-center justify-center text-white relative">
-                        <div 
-                            class="absolute -top-2 -left-2 bg-opacity-90 rounded-full flex justify-center items-center w-5 h-5 bg-gray-700 text-xs">
-                            0
-                        </div>
-                        <svg width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    <input 
+                        type="text" 
+                        class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" 
+                        placeholder="جستجو در محصولات" 
+                        />
+                    <button class="w-fit px-5 text-gray-900">
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
-                    </a>
+                    </button>
+                    <div 
+                        id="select_drop_down" 
+                        data-collapse="false"
+                        class="hidden w-[200px] h-auto py-4 rounded flex-col absolute bg-white top-12 text-black shadow-xl">
+                        <input type="text" class="w-auto focus:outline-none bg-gray-100 rounded mx-2 text-gray-900"/>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">همه</button>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">مد و پوشاک</button>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">کالای دیجیتال</button>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">ارایشی و سلامت</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -475,8 +517,12 @@
                 <a class="hover:text-red-500 transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
             </div>
         </div>
-        <header class="w-full h-auto py-5 text-white px-3 mb-24">
-
+        <header class="w-full h-auto py-5 text-white px-3">
+           <div class="w-full h-auto flex flex-col">
+                <div class="rounded-3xl overflow-hidden w-full h-auto bg-black">
+                    <img class="w-full h-auto" src="" alt="Slider Photo" />
+                </div>
+           </div>
         </header>
         <main class="flex flex-col gap-y-24">
 
@@ -570,36 +616,84 @@
                     </div>
                 </div>
             </section>
-            <section class="w-full bg-white">
-                <div class="w-full flex flex-col gap-y-4 lg:flex-row p-4">
-                    <div class="w-full flex flex-col gap-y-5 px-4">
-                        <span class="text-gray-600 text-xl">فروشگاه قابل اعمتاد است</span>
-                        <div>
-                            <p class="text-gray-500">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت
-                            </p>
+            <section class="w-full h-auto flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 bg-white">
+                    <div class="w-full flex flex-col gap-y-4 p-4">
+                        <div class="w-full flex flex-col gap-y-5 px-4">
+                            <span class="text-gray-600 text-xl">فروشگاه قابل اعمتاد است</span>
+                            <div>
+                                <p class="text-gray-500">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col gap-y-5 px-4">
+                            <span class="text-gray-600 text-xl">با ، آنلاین و ارزان خرید کنید</span>
+                            <div class="w-full flex flex-wrap items-center justify-around">
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/mellat-1.png" alt="Trust Photo" />
+                                </a>
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/zarrinpal-1.png" alt="Trust Photo" />
+                                </a>
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/50a7c6fb-1.png" alt="Trust Photo" />
+                                </a>
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/logoaspx-1.png" alt="Trust Photo" />
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-full flex flex-col gap-y-5 px-4">
-                        <span class="text-gray-600 text-xl">با ، آنلاین و ارزان خرید کنید</span>
-                        <div class="w-full flex flex-wrap items-center justify-around">
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/mellat-1.png" alt="Trust Photo" />
-                            </a>
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/zarrinpal-1.png" alt="Trust Photo" />
-                            </a>
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/50a7c6fb-1.png" alt="Trust Photo" />
-                            </a>
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="https://demo.wizgraphic.ir/timcheh/wp-content/uploads/2021/09/logoaspx-1.png" alt="Trust Photo" />
-                            </a>
+                </div>
+                <div class="w-full md:w-1/2 bg-white">
+                    <div class="w-full h-full flex flex-col justify-between gap-y-3 p-4">
+                        <div class="w-full flex flex-col gap-y-3">
+                            <span class="text-xl">همراه با ما</span>
+                            <div class="flex w-full justify-around">
+                                <div class="flex flex-col gap-y-3">
+                                    <a href="#">تماس با ما</a>
+                                    <a href="#">درباره ما</a>
+                                    <a href="#">وبلاگ</a>
+                                </div>
+                                <div class="flex flex-col gap-y-3">
+                                    <a href="#">امکان پرداخت در محل</a>
+                                    <a href="#">امکان تحویل اکسپرس</a>
+                                    <a href="#">پرسش های متداول</a>
+                                </div>
+                                <div class="flex flex-col gap-y-3">
+                                    <a href="#">امکان پرداخت در محل</a>
+                                    <a href="#">امکان تحویل اکسپرس</a>
+                                    <a href="#">پرسش های متداول</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col gap-y-3">
+                            <span class="text-xl">همراه با ما</span>
+                            <span class="text-md">با عضویت در خبرنامه از آخرین اخبار و محصولات سایت با خبر شوید...</span>
+                            <div>
+                                <div class="w-full relative flex justify-center items-center">
+                                    <button 
+                                        class="absolute rounded py-1 px-3 bg-[#0077B6] hover:bg-[#0096C7] transition-all duration-200 left-2 text-white">
+                                        عضوم کن
+                                    </button>
+                                    <input 
+                                        type="email" 
+                                        class="bg-gray-100 h-12 w-full rounded pr-3 focus:border-gray-400 focus:outline-gray-300" 
+                                        placeholder="آدرس ایمیل"
+                                        />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between">
+                            <a href="#">sinamohamadi317@gmail.com</a>
+                            <a href="#">09015165671</a>
+                            <a href="#">ایران مشهد</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="w-full py-4 flex items-center justify-center bg-[#edecec]">
+            <section class="w-full py-4 flex items-center justify-center text-center bg-[#edecec]">
                 <span class="text-gray-500">کلیه حقوق مادی و معنوی این سایت متعلق به سایت می باشد.</span>
             </section>
         </footer>

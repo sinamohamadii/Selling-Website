@@ -13,6 +13,10 @@
             />
         <script src="./../tailwind/tailwindcdn"></script>
         <script src="./../tailwind/tailwind.config.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+            />
         <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./../font/yekan.css" />
         <link 
@@ -530,8 +534,23 @@
                         <img class="rounded-3xl" src="./../img/headerphoto2.jpg" alt="Header Photo" />
                     </div>
                 </div>
-                <div class="overflow-hidden w-full h-auto lg:w-4/5 lg:pr-2">
-                    <img class="rounded-3xl w-full h-auto" src="./../img/headerslide1.jpg" alt="Slider Photo" />
+                <div class="rounded-3xl overflow-hidden w-full h-auto lg:w-4/5 lg:pr-2">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img class="rounded-3xl w-full h-auto" src="./../img/headerslide1.jpg" alt="Slider Photo" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="rounded-3xl w-full h-auto" src="./../img/headerslide2.jpg" alt="Slider Photo" />
+                          </div>
+                          <div class="swiper-slide">
+                            <img class="rounded-3xl w-full h-auto" src="./../img/headerslode3.jpg" alt="Slider Photo" />
+                          </div>
+                        </div>
+                        <div class="swiper-button-next !text-black !bg-white rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-button-prev !text-black !bg-white rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
            </div>
         </header>
@@ -666,130 +685,201 @@
                             <img class="rounded-3xl" src="./../img/schon.jpg" alt="Product Photo" />
                         </div>
                     </div>
-                    <div class="overflow-auto w-full h-auto lg:w-4/5 lg:mr-2 bg-gray-100 rounded-3xl p-5 flex">  
-                        <div class="w-full min-w-fit h-full flex flex-col md:flex-row items-center p-3">
-                            <div class="w-full lg:w-[35%] bg-white rounded-3xl flex items-center justify-center">
-                                <img class="w-full max-w-[354px] rounded-3xl" src="./../img/product1.jpg" alt="Product Photo" />
+                    <div class="overflow-auto w-full h-auto lg:w-4/5 lg:mr-2 bg-gray-100 rounded-3xl p-5 flex">
+                        <div class="swiper mySwiper2 rounded-3xl overflow-hidden">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide !w-full xs:!min-w-fit h-full flex gap-x-7 flex-col md:flex-row items-center p-3">
+                                    <div class="w-full lg:w-[35%] bg-white rounded-3xl flex items-center justify-center">
+                                        <img class="w-full max-w-[354px] rounded-3xl" src="./../img/product1.jpg" alt="Product Photo" />
+                                    </div>
+                                    <div class="gap-y-3 lg:gap-y-0 lg:h-full flex flex-col justify-around py-4">
+                                        <a href="#">
+                                            <span class="text-xl text-gray-900 font-[500]">آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="text-md text-gray-400">2021 Apple iPad Mini (Wi-Fi, 64GB)</span>
+                                        </a>
+                                        <div class="flex gap-x-1">
+                                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                            <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="fas fa-sd-card"></i>
+                                                <span>حافظه داخلی:</span>
+                                            </span>
+                                            <span class="text-gray-500">64 گیگابایت</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="fas fa-memory"></i>
+                                                <span>مقدار رم:</span>
+                                            </span>
+                                            <span class="text-gray-500">6 گیگابایت</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="far fa-chart-network"></i>
+                                                <span>شبکه های ارتباطی:</span>
+                                            </span>
+                                            <span class="text-gray-500">5G، 4G، 3G، 2G</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-[#3fdf76] text-2xl font-semibold">46,900,000</span>
+                                            <span class="text-sm text-gray-400">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <a 
+                                                href="#" 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-[#3fdf76]">
+                                                <i class="text-white lg:hidden lg:fa-2x fas fa-shopping-cart"></i>
+                                                <i class="text-white hidden lg:inline fa-2x fas fa-shopping-cart"></i>
+                                            </a>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide !w-full xs:!min-w-fit h-full flex gap-x-7 flex-col md:flex-row items-center p-3">
+                                    <div class="w-full lg:w-[35%] bg-white rounded-3xl flex items-center justify-center">
+                                        <img class="w-full max-w-[354px] rounded-3xl" src="./../img/product2.jpg" alt="Product Photo" />
+                                    </div>
+                                    <div class="gap-y-3 lg:gap-y-0 lg:h-full flex flex-col justify-around py-4">
+                                        <a href="#">
+                                            <span class="text-xl text-gray-900 font-[500]">آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="text-md text-gray-400">2021 Apple iPad Mini (Wi-Fi, 64GB)</span>
+                                        </a>
+                                        <div class="flex gap-x-1">
+                                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                            <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="fas fa-sd-card"></i>
+                                                <span>حافظه داخلی:</span>
+                                            </span>
+                                            <span class="text-gray-500">64 گیگابایت</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="fas fa-memory"></i>
+                                                <span>مقدار رم:</span>
+                                            </span>
+                                            <span class="text-gray-500">6 گیگابایت</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="far fa-chart-network"></i>
+                                                <span>شبکه های ارتباطی:</span>
+                                            </span>
+                                            <span class="text-gray-500">5G، 4G، 3G، 2G</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-[#3fdf76] text-2xl font-semibold">46,900,000</span>
+                                            <span class="text-sm text-gray-400">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <a 
+                                                href="#" 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-[#3fdf76]">
+                                                <i class="text-white lg:hidden lg:fa-2x fas fa-shopping-cart"></i>
+                                                <i class="text-white hidden lg:inline fa-2x fas fa-shopping-cart"></i>
+                                            </a>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide !w-full xs:!min-w-fit h-full flex gap-x-7 flex-col md:flex-row items-center p-3">
+                                    <div class="w-full lg:w-[35%] bg-white rounded-3xl flex items-center justify-center">
+                                        <img class="w-full max-w-[354px] rounded-3xl" src="./../img/product3.jpg" alt="Product Photo" />
+                                    </div>
+                                    <div class="gap-y-3 lg:gap-y-0 lg:h-full flex flex-col justify-around py-4">
+                                        <a href="#">
+                                            <span class="text-xl text-gray-900 font-[500]">آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
+                                        </a>
+                                        <a href="#">
+                                            <span class="text-md text-gray-400">2021 Apple iPad Mini (Wi-Fi, 64GB)</span>
+                                        </a>
+                                        <div class="flex gap-x-1">
+                                            <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                            <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                            <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="fas fa-sd-card"></i>
+                                                <span>حافظه داخلی:</span>
+                                            </span>
+                                            <span class="text-gray-500">64 گیگابایت</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="fas fa-memory"></i>
+                                                <span>مقدار رم:</span>
+                                            </span>
+                                            <span class="text-gray-500">6 گیگابایت</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <span class="flex gap-x-1 items-center text-gray-600">
+                                                <i class="far fa-chart-network"></i>
+                                                <span>شبکه های ارتباطی:</span>
+                                            </span>
+                                            <span class="text-gray-500">5G، 4G، 3G، 2G</span>
+                                        </div>
+                                        <div>
+                                            <span class="text-[#3fdf76] text-2xl font-semibold">46,900,000</span>
+                                            <span class="text-sm text-gray-400">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <a 
+                                                href="#" 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-[#3fdf76]">
+                                                <i class="text-white lg:hidden lg:fa-2x fas fa-shopping-cart"></i>
+                                                <i class="text-white hidden lg:inline fa-2x fas fa-shopping-cart"></i>
+                                            </a>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                            <div 
+                                                class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex flex-col justify-around pr-7 py-4">
-                                <a href="#">
-                                    <span class="text-xl text-gray-900 font-[500]">آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
-                                </a>
-                                <a href="#">
-                                    <span class="text-md text-gray-400">2021 Apple iPad Mini (Wi-Fi, 64GB)</span>
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <span class="flex gap-x-1 items-center text-gray-600">
-                                        <i class="fas fa-sd-card"></i>
-                                        <span>حافظه داخلی:</span>
-                                    </span>
-                                    <span class="text-gray-500">64 گیگابایت</span>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <span class="flex gap-x-1 items-center text-gray-600">
-                                        <i class="fas fa-memory"></i>
-                                        <span>مقدار رم:</span>
-                                    </span>
-                                    <span class="text-gray-500">6 گیگابایت</span>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <span class="flex gap-x-1 items-center text-gray-600">
-                                        <i class="far fa-chart-network"></i>
-                                        <span>شبکه های ارتباطی:</span>
-                                    </span>
-                                    <span class="text-gray-500">5G، 4G، 3G، 2G</span>
-                                </div>
-                                <div>
-                                    <span class="text-[#3fdf76] text-2xl font-semibold">46,900,000</span>
-                                    <span class="text-sm text-gray-400">تومان</span>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <a 
-                                        href="#" 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-[#3fdf76]">
-                                        <i class="text-white lg:hidden lg:fa-2x fas fa-shopping-cart"></i>
-                                        <i class="text-white hidden lg:inline fa-2x fas fa-shopping-cart"></i>
-                                    </a>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full min-w-fit h-full flex flex-col md:flex-row items-center p-3">
-                            <div class="w-full lg:w-[35%] bg-white rounded-3xl flex items-center justify-center">
-                                <img class="w-full max-w-[354px] rounded-3xl" src="./../img/product1.jpg" alt="Product Photo" />
-                            </div>
-                            <div class="flex flex-col justify-around pr-7 py-4">
-                                <a href="#">
-                                    <span class="text-xl text-gray-900 font-[500]">آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
-                                </a>
-                                <a href="#">
-                                    <span class="text-md text-gray-400">2021 Apple iPad Mini (Wi-Fi, 64GB)</span>
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <span class="flex gap-x-1 items-center text-gray-600">
-                                        <i class="fas fa-sd-card"></i>
-                                        <span>حافظه داخلی:</span>
-                                    </span>
-                                    <span class="text-gray-500">64 گیگابایت</span>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <span class="flex gap-x-1 items-center text-gray-600">
-                                        <i class="fas fa-memory"></i>
-                                        <span>مقدار رم:</span>
-                                    </span>
-                                    <span class="text-gray-500">6 گیگابایت</span>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <span class="flex gap-x-1 items-center text-gray-600">
-                                        <i class="far fa-chart-network"></i>
-                                        <span>شبکه های ارتباطی:</span>
-                                    </span>
-                                    <span class="text-gray-500">5G، 4G، 3G، 2G</span>
-                                </div>
-                                <div>
-                                    <span class="text-[#3fdf76] text-2xl font-semibold">46,900,000</span>
-                                    <span class="text-sm text-gray-400">تومان</span>
-                                </div>
-                                <div class="flex gap-x-2">
-                                    <a href="#" class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-[#3fdf76]">
-                                        <i class="text-white lg:hidden lg:fa-2x fas fa-shopping-cart"></i>
-                                        <i class="text-white hidden lg:inline fa-2x fas fa-shopping-cart"></i>
-                                    </a>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                    <div 
-                                        class="rounded-3xl flex justify-center items-center w-[45px] h-[45px] lg:w-[75px] lg:h-[75px] bg-white">
-                                    </div>
-                                </div>
-                            </div>
+                            <div class="swiper-button-next !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
+                            <div class="swiper-button-prev !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
                         </div>
                     </div>
                </div>
@@ -797,253 +887,357 @@
             <section class="w-full h-auto px-3 flex flex-col gap-y-7">
                 <div class="w-full flex items-center justify-between">
                     <h4 class="text-gray-800 font-bold text-xl">جدیدترین محصولات</h4>
-                    <div class="bg-gray-100 rounded-3xl w-32 h-12 relative flex items-center justify-center">
-                        <span>همه</span>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 left-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-left text-gray-600" aria-hidden="true"></i>
-                        </div>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 right-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-right text-gray-600" aria-hidden="true"></i>
-                        </div>
-                    </div>
                 </div>
                 <div class="w-full flex gap-x-3 overflow-auto">
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product1.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product3.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product4.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product5.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product6.jpg" alt="Product Photo" />
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product7.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-button-prev !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
                     </div>
                 </div>
             </section>
@@ -1053,253 +1247,357 @@
             <section class="w-full h-auto px-3 flex flex-col gap-y-7">
                 <div class="w-full flex items-center justify-between">
                     <h4 class="text-gray-800 font-bold text-xl">محصولات پرفروش</h4>
-                    <div class="bg-gray-100 rounded-3xl w-32 h-12 relative flex items-center justify-center">
-                        <span>همه</span>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 left-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-left text-gray-600" aria-hidden="true"></i>
-                        </div>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 right-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-right text-gray-600" aria-hidden="true"></i>
-                        </div>
-                    </div>
                 </div>
                 <div class="w-full flex gap-x-3 overflow-auto">
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product1.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product3.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product4.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product5.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product6.jpg" alt="Product Photo" />
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product7.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-button-prev !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
                     </div>
                 </div>
             </section>
@@ -1316,253 +1614,357 @@
             <section class="w-full h-auto px-3 flex flex-col gap-y-7">
                 <div class="w-full flex items-center justify-between">
                     <h4 class="text-gray-800 font-bold text-xl">محصولات اپل</h4>
-                    <div class="bg-gray-100 rounded-3xl w-32 h-12 relative flex items-center justify-center">
-                        <span>همه</span>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 left-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-left text-gray-600" aria-hidden="true"></i>
-                        </div>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 right-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-right text-gray-600" aria-hidden="true"></i>
-                        </div>
-                    </div>
                 </div>
                 <div class="w-full flex gap-x-3 overflow-auto">
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                    <div class="swiper mySwiper3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product1.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product3.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
-                                </div>
-                            </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
-                            </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product4.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
-                    </div>
-                    <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
-                        <div class="w-full flex items-center justify-between">
-                            <div class="flex flex-col justify-between items-start gap-y-2">
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-800">
-                                    هدفون بلوتوثی اپل مدل AirPods Max
-                                </a>
-                                <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
-                                    APPLE AirPods Max Bluetooth Headphones
-                                </a>
-                                <div class="flex gap-x-1">
-                                    <div class="w-2 h-2 rounded-full bg-red-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-blue-500"></div>
-                                    <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product5.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
-                            <a 
-                                href="#" 
-                                class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
-                                <i class="text-white fa-2x fas fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div>
-                                <span class="text-gray-800 text-md">46,500,650</span>
-                                <span class="text-gray-500 text-sm">تومان</span>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product6.jpg" alt="Product Photo" />
+                                    </div>
+                                </div>
                             </div>
-                            <div class="flex gap-x-2">
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <i class="fa-xs far fa-heart"></i>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                                    </svg>
-                                </div>
-                                <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
-                                    <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
-                                        <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
-                                    </svg>
+                            <div class="swiper-slide">
+                                <div class=" h-auto bg-gray-100 rounded-3xl p-5 flex flex-col gap-y-2 w-[300px]">
+                                    <div class="w-full flex items-center justify-between">
+                                        <div class="flex flex-col justify-between items-start gap-y-2">
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-800">
+                                                هدفون بلوتوثی اپل مدل AirPods Max
+                                            </a>
+                                            <a href="#" class="text-sm truncate w-[160px] text-gray-500" dir="ltr">
+                                                APPLE AirPods Max Bluetooth Headphones
+                                            </a>
+                                            <div class="flex gap-x-1">
+                                                <div class="w-2 h-2 rounded-full bg-red-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-blue-500"></div>
+                                                <div class="w-2 h-2 rounded-full bg-green-500"></div>
+                                            </div>
+                                        </div>
+                                        <a 
+                                            href="#" 
+                                            class="w-[85px] h-[85px] bg-[#3fdf76] text-white rounded-3xl flex items-center justify-center">
+                                            <i class="text-white fa-2x fas fa-shopping-cart"></i>
+                                        </a>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-gray-800 text-md">46,500,650</span>
+                                            <span class="text-gray-500 text-sm">تومان</span>
+                                        </div>
+                                        <div class="flex gap-x-2">
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <i class="fa-xs far fa-heart"></i>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="w-6 h-6 rounded-full bg-gray-200 flex items-center justify-center text-gray-500">
+                                                <svg width="14" height="14" fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.624 9.624 0 0 0 7.556 8a9.624 9.624 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.595 10.595 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.624 9.624 0 0 0 6.444 8a9.624 9.624 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5z"/>
+                                                    <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192zm0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192z"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
+                                        <img class="w-[132px]" src="./../img/product7.jpg" alt="Product Photo" />
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="bg-white flex items-center justify-center rounded-3xl overflow-hidden w-full">
-                            <img class="w-[132px]" src="./../img/product2.jpg" alt="Product Photo" />
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-button-prev !text-black !bg-gray-200 rounded-xl w-12 h-12 after:text-[20px]"></div>
                     </div>
                 </div>
             </section>
@@ -1585,17 +1987,6 @@
             <section class="w-full overflow-hidden h-auto flex flex-col px-3 gap-y-7">
                 <div class="w-full flex items-center justify-between">
                     <h4 class="text-gray-800 font-bold text-xl">مطالب وبلاگ</h4>
-                    <div class="bg-gray-100 rounded-3xl w-32 h-12 relative flex items-center justify-center">
-                        <span>همه</span>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 left-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-left text-gray-600" aria-hidden="true"></i>
-                        </div>
-                        <div 
-                            class="bg-gray-200 rounded-full w-10 h-10 absolute top-1 right-1 flex items-center justify-center cursor-pointer">
-                            <i class="fa fa-angle-right text-gray-600" aria-hidden="true"></i>
-                        </div>
-                    </div>
                 </div>
                 <div class="w-full h-auto flex !overflow-auto">
                     <div class="w-1/4 min-w-[310px] pl-3">
@@ -1836,6 +2227,7 @@
             </section>
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="./js/index.js"></script>
     </body>
 

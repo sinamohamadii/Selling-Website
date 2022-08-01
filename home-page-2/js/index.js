@@ -108,6 +108,7 @@ let headerSwiper = new Swiper(".mySwiper", {
     },
     autoplay: {
         delay: 5000,
+        disableOnInteraction: false
     },
 });
 

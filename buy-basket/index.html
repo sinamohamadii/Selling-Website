@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>حساب کاربری</title>
+        <title>سبد خرید</title>
         <link 
             rel="icon" 
             href="./../img/titleLogo.png" 
@@ -245,8 +245,8 @@
                                 class="hover-navbar absolute hidden w-[200px] p-3 top-[72px] rounded bg-white gap-y-2 flex-col shadow-xl">
                                 <a href="./../home-page/index.html" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
                                 <a href="./../home-page-2/index.html" class="hover:text-[#00B4D8]">صفحه نخست فروشگاهی</a>
-                                <a href="#" class="hover:text-[#00B4D8]">حساب کاربری</a>
-                                <a href="./../buy-basket/index.html" class="hover:text-[#00B4D8]">سبد خرید</a>
+                                <a href="./../account/index.html" class="hover:text-[#00B4D8]">حساب کاربری</a>
+                                <a href="#" class="hover:text-[#00B4D8]">سبد خرید</a>
                                 <a href="#" class="hover:text-[#00B4D8]">صفحه محصول</a>
                                 <a href="#" class="hover:text-[#00B4D8]">وبلاگ</a>
                                 <a href="#" class="hover:text-[#00B4D8]">برند ها</a>
@@ -505,8 +505,8 @@
                         <div class="flex flex-col gap-y-3 mt-3">
                             <a href="./../home-page/index.html" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
                             <a href="./../home-page-2/index.html" class="hover:text-[#00B4D8]">صفحه نخست فروشگاهی</a>
-                            <a href="#" class="hover:text-[#00B4D8]">حساب کاربری</a>
-                            <a href="./../buy-basket/index.html" class="hover:text-[#00B4D8]">سبد خرید</a>
+                            <a href="./../account/index.html" class="hover:text-[#00B4D8]">حساب کاربری</a>
+                            <a href="#" class="hover:text-[#00B4D8]">سبد خرید</a>
                             <a href="#" class="hover:text-[#00B4D8]">صفحه محصول</a>
                             <a href="#" class="hover:text-[#00B4D8]">وبلاگ</a>
                             <a href="#" class="hover:text-[#00B4D8]">برند ها</a>
@@ -522,41 +522,13 @@
         </div>
         <main class="flex flex-col gap-y-16 mt-8">
             <section class="w-full h-auto flex items-center justify-center px-3">
-                <div class="bg-gray-100 rounded-3xl flex flex-col gap-y-4 w-full h-auto p-4 max-w-[616px]">
-                    <div class="flex justify-between items-center">
-                        <span class="text-lg font-semibold">ورود</span>
-                        <a  
-                            href="#" 
-                            class="rounded-3xl bg-gray-200 px-3 py-2 text-gray-900 hover:bg-red-400 hover:text-white transition-all duration-200">
-                            عضویت
-                        </a>
-                    </div>
-                    <form action="#" class="flex flex-col gap-y-3">
-                        <div class="flex flex-col gap-y-2">
-                            <label for="user_name" class="text-gray-500 max-w-fit">نام کاربری یا آدرس ایمیل *</label>
-                            <input 
-                                type="email" 
-                                id="user_name" 
-                                class="bg-white rounded-3xl w-full border border-gray-300 hover:outline-none pr-3 h-8 py-2" 
-                                />
-                        </div>
-                        <div class="flex flex-col gap-y-2">
-                            <label for="user_pass" class="text-gray-500 max-w-fit">گذرواژه *</label>
-                            <input 
-                                type="password" 
-                                id="user_pass" 
-                                class="bg-white rounded-3xl w-full border border-gray-300 hover:outline-none pr-3 h-8 py-2" 
-                                />
-                        </div>
-                        <a href="#" class="text-red-500 hover:text-red-400">گذرواژه خود را فراموش کرده اید؟</a>
-                        <div class="flex justify-between items-center">
-                            <div class="flex gap-x-2">
-                                <input type="checkbox" id="user_checkbox" class="accent-[#3fdf76]" />
-                                <label for="user_checkbox" class="text-gray-500">مرا به خاطر بسپار</label>
-                            </div>
-                            <button type="submit" class="text-white px-8 py-3 rounded-3xl bg-[#3fdf76]">ورود</button>
-                        </div>
-                    </form>
+                <div class="w-full h-auto flex flex-col items-center justify-center gap-y-5 p-5 max-w-[616px]">
+                    <img class="w-full h-auto" src="./../img/empty-cart.svg" alt="Empty Card" />
+                    <span class="text-md text-gray-600">سبد خرید شما در حال حاضر خالیست.</span>
+                    <a href="#" class="bg-[#3fdf76] text-white px-4 flex items-center justify-center gap-x-2 py-2 rounded-3xl">
+                        <span><i class="fas fa-store"></i></span>
+                        <span>بازگشت به فروشگاه</span>
+                    </a>
                 </div>
             </section>
         </main>

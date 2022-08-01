@@ -94,7 +94,7 @@ function openSelect() {
 }
 
 /* sliders */
-var swiper = new Swiper(".mySwiper", {
+let headerSwiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     loop: true,
@@ -111,23 +111,66 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-var swiper = new Swiper(".mySwiper2", {
+
+let discountSwiper = new Swiper(".mySwiper2", {
     spaceBetween: 30,
+    slidesPerView: 'auto',
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
 
-var swiper = new Swiper(".mySwiper3", {
-    slidesPerView: 4.2,
+
+let productSwiper = new Swiper(".mySwiper3", {
+    spaceBetween: 30,
+    slidesPerView: 'auto',
     loop: true,
     pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+        el: ".swiper-pagination",
+        clickable: true,
     },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-  });
+});
+
+
+/* discount countdown */
+let countDownDate = new Date("August 25, 2022 15:37:25").getTime();
+let elSeconds = document.querySelectorAll(".seconds");
+let elMinutes = document.querySelectorAll(".minutes");
+let elHours = document.querySelectorAll(".hours");
+let elDays = document.querySelectorAll(".days");
+
+let x = setInterval(function () {
+
+    let now = new Date().getTime();
+
+    let distance = countDownDate - now;
+
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    let i;
+    for (i = 0; i < elSeconds.length; i++) {
+        elSeconds[i].innerHTML = seconds;
+    }
+    for (i = 0; i < elMinutes.length; i++) {
+        elMinutes[i].innerHTML = minutes;
+    }
+    for (i = 0; i < elHours.length; i++) {
+        elHours[i].innerHTML = hours;
+    }
+    for (i = 0; i < elDays.length; i++) {
+        elDays[i].innerHTML = days;
+    }
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+}, 1000);

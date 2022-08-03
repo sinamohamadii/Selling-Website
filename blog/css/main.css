@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-color: rgb(156, 156, 156) rgb(209, 209, 209);
+    scrollbar-width: thin;
+}
+
+body {
+    font: 12pt/2 Yekan, sans-serif;
+}
+
+.navbar-item:hover .hover-navbar {
+    display: flex !important;
+}
+
+.active-nav-item {
+    background-color: #fff0f0;
+    color: #ef4444;
+}
+
+
+#instagram {
+    background: rgb(253, 113, 108);
+    background: linear-gradient(45deg, rgba(253, 113, 108, 1) 0%, rgba(245, 95, 152, 1) 100%);
+}
+
+#telegram {
+    background: rgb(99, 198, 243);
+    background: linear-gradient(45deg, rgba(99, 198, 243, 1) 0%, rgba(48, 167, 225, 1) 100%);
+}
+
+.swiper-pagination-bullet{
+    background-color: white !important;
+    opacity: 50% !important;
+}
+
+.swiper-pagination-bullet-active{
+    background-color: white !important;
+    opacity: 90% !important;
+}

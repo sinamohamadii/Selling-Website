@@ -5,7 +5,7 @@
         <meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>صفحه نخست</title>
+        <title>وبلاگ</title>
         <link 
             rel="icon" 
             href="./../img/titleLogo.png" 
@@ -13,6 +13,10 @@
             />
         <script src="./../tailwind/tailwindcdn"></script>
         <script src="./../tailwind/tailwind.config.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+            />
         <link rel="stylesheet" href="./css/main.css" />
         <link rel="stylesheet" href="./../font/yekan.css" />
         <link 
@@ -31,19 +35,21 @@
             class="hidden bg-gray-400 w-screen h-screen bg-opacity-50 z-[1100] fixed top-0 left-0">
         </div>        
         <nav class="sticky top-0 left-0 w-full h-auto px-3 shadow-2xl shadow-gray-100 bg-white py-3 lg:py-0 lg:h-[72px] z-[900]">
-            <div class="relative w-full h-auto flex flex-col items-center gap-y-3 md:flex-row md:gap-x-1 xl:gap-x-3 lg:h-full">
-                <a href="#" class="w-full flex items-center justify-center md:justify-start md:min-w-[220px] lg;min-w-0 md:w-[350px]">
+            <div class="relative w-full h-full flex flex-col items-center gap-y-3 md:flex-row md:gap-x-3 lg:h-full">
+                <a href="#" class="w-full flex items-center justify-center md:justify-start md:w-[350px]">
                     پیاده سازی شده توسط سینا محمدی
                 </a>
-                <div class="w-full flex justify-between items-center lg:h-full">
-                    <button class="p-3 bg-gray-100 rounded lg:hidden" onclick="Sidebar()">
+                <div class="h-full w-full flex justify-between items-center">
+                    <div class="w-fit flex justify-start items-center lg:h-full">
+                    <button class="p-3 bg-gray-100 rounded xl:hidden" onclick="Sidebar()">
                         <svg width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
                         </svg>
                     </button>
-                    <div class="hidden lg:flex gap-x-[10px] items-center h-full">
+                    <div class="hidden xl:flex gap-x-3 items-center h-full">
                         <div class="navbar-item flex flex-col h-full items-center justify-center">
-                            <div class="hover:text-[#00B4D8] flex gap-x-2 items-center transition-all duration-100 ease cursor-pointer h-full">
+                            <div 
+                                class="hover:text-[#00B4D8] flex gap-x-2 items-center transition-all duration-100 ease cursor-pointer h-full">
                                 <span class="h-full flex items-center justify-center">
                                     <svg width="20" height="20" fill="currentColor" class="bi bi-list-nested" viewBox="0 0 16 16">
                                         <path fill-rule="evenodd" d="M4.5 11.5A.5.5 0 0 1 5 11h10a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm-2-4A.5.5 0 0 1 1 3h10a.5.5 0 0 1 0 1H1a.5.5 0 0 1-.5-.5z"/>
@@ -234,17 +240,19 @@
                                 </div>
                             </div>
                         </div>
-                        <a class="hover:text-[#00B4D8] transition-all duration-100 ease" href="./../blog/index.html">وبلاگ</a>
+                        <a class="hover:text-[#00B4D8] transition-all duration-100 ease" href="#">وبلاگ</a>
                         <a class="hover:text-[#00B4D8] transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
-                        <div class="navbar-item transition-all duration-100 ease cursor-pointer relative flex flex-col h-full items-center justify-center">
-                            <div class="hover:text-[#00B4D8] flex items-center">تمام صفحات این پروژه</div>
-                            <div class="hover-navbar absolute hidden w-[200px] p-3 top-[72px] rounded bg-white gap-y-2 flex-col shadow-xl">
-                                <a href="#" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
+                        <div 
+                            class="navbar-item transition-all duration-100 ease cursor-pointer relative flex flex-col h-full items-center justify-center">
+                            <div class="hover:text-[#00B4D8] flex items-center h-full">تمام صفحات این پروژه</div>
+                            <div 
+                                class="hover-navbar absolute hidden w-[200px] p-3 top-[72px] rounded bg-white gap-y-2 flex-col shadow-xl">
+                                <a href="./../home-page/index.html" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
                                 <a href="./../home-page-2/index.html" class="hover:text-[#00B4D8]">صفحه نخست فروشگاهی</a>
                                 <a href="./../account/index.html" class="hover:text-[#00B4D8]">حساب کاربری</a>
                                 <a href="./../buy-basket/index.html" class="hover:text-[#00B4D8]">سبد خرید</a>
                                 <a href="#" class="hover:text-[#00B4D8]">صفحه محصول</a>
-                                <a href="./../blog/index.html" class="hover:text-[#00B4D8]">وبلاگ</a>
+                                <a href="#" class="hover:text-[#00B4D8]">وبلاگ</a>
                                 <a href="#" class="hover:text-[#00B4D8]">برند ها</a>
                                 <a href="#" class="hover:text-[#00B4D8]">پیشنهادهای ویژه</a>
                                 <a href="./../contact-us/index.html" class="hover:text-[#00B4D8]">تماس با ما</a>
@@ -252,34 +260,75 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex items-center justify-between gap-x-3">
-                        <span class="text-[#00B4D8] inline-block animate-bounce">
-                            <svg width="26" height="26" fill="currentColor" class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-                            </svg>
-                        </span>
-                        <span class="text-base inline-block">09015165671</span>
+                    </div>
+                    <div class="w-full flex items-center justify-end md:w-fit md:gap-x-3 pr-4">
+                        <div class="w-full hidden xs:flex items-center bg-gray-100 rounded-3xl h-12 md:max-w-[375px] relative">
+                            <button onclick="openSelect()" class="w-fit px-5 text-gray-900">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                                    <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                                </svg>
+                            </button>
+                            <input 
+                                type="text" 
+                                class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" 
+                                placeholder="جستجو در محصولات" 
+                                />
+                            <button class="w-fit px-5 text-gray-900">
+                                <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                                </svg>
+                            </button>
+                            <div 
+                                id="select_drop_down" 
+                                data-collapse="false"
+                                class="hidden w-[200px] h-auto py-4 rounded flex-col absolute bg-white top-12 text-black shadow-xl">
+                                <input type="text" class="w-auto focus:outline-none bg-gray-100 rounded mx-2 text-gray-900"/>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">همه</button>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">مد و پوشاک</button>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">کالای دیجیتال</button>
+                                <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">ارایشی و سلامت</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-x-3 xs:pr-4">
+                            <div class="bg-gray-100 flex justify-center items-center rounded-2xl w-12 h-12">
+                                <svg width="22" height="22" fill="currentColor" class="bi bi-person text-gray-600" viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                                </svg>
+                            </div>
+                            <div class="bg-[#fd6564] text-white flex justify-center items-center rounded-2xl w-12 h-12">
+                                <svg width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+                                    <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                                </svg>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="w-full flex justify-between items-center md:justify-end md:w-fit md:gap-x-3">
-                    <button class="hover:shadow-md shadow active:shadow-lg p-3 bg-gray-100 rounded flex gap-x-2 items-center justify-center">
-                        <svg width="22" height="22" fill="currentColor" class="bi bi-person text-gray-600" viewBox="0 0 16 16">
-                            <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z"/>
+                <div class="w-full flex xs:hidden items-center bg-gray-100 rounded-3xl h-12 md:max-w-[375px] relative">
+                    <button onclick="openSelect()" class="w-fit px-5 text-gray-900">
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
+                            <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                         </svg>
-                        <div class="flex text-gray-500">
-                            <span class="font-normal border-l border-gray-400 pl-2 ml-2">ورود</span>
-                            <span class="font-normal">عضویت</span>
-                        </div>
                     </button>
-                    <a href="#" class="w-10 h-10 p-3 rounded bg-[#00B4D8] hover:bg-[#48CAE4] transition-all duration-200 flex items-center justify-center text-white relative">
-                        <div 
-                            class="absolute -top-2 -left-2 bg-opacity-90 rounded-full flex justify-center items-center w-5 h-5 bg-gray-700 text-xs">
-                            0
-                        </div>
-                        <svg width="20" height="20" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
-                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+                    <input 
+                        type="text" 
+                        class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" 
+                        placeholder="جستجو در محصولات" 
+                        />
+                    <button class="w-fit px-5 text-gray-900">
+                        <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                         </svg>
-                    </a>
+                    </button>
+                    <div 
+                        id="select_drop_down" 
+                        data-collapse="false"
+                        class="hidden w-[200px] h-auto py-4 rounded flex-col absolute bg-white top-12 text-black shadow-xl">
+                        <input type="text" class="w-auto focus:outline-none bg-gray-100 rounded mx-2 text-gray-900"/>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">همه</button>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">مد و پوشاک</button>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">کالای دیجیتال</button>
+                        <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">ارایشی و سلامت</button>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -458,12 +507,12 @@
                     </button>
                     <div class="pr-3 text-gray-700 w-full hidden" data-toggle="close">
                         <div class="flex flex-col gap-y-3 mt-3">
-                            <a href="#" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
+                            <a href="./../home-page/index.html" class="hover:text-[#00B4D8]">صفحه نخست شرکتی</a>
                             <a href="./../home-page-2/index.html" class="hover:text-[#00B4D8]">صفحه نخست فروشگاهی</a>
                             <a href="./../account/index.html" class="hover:text-[#00B4D8]">حساب کاربری</a>
                             <a href="./../buy-basket/index.html" class="hover:text-[#00B4D8]">سبد خرید</a>
                             <a href="#" class="hover:text-[#00B4D8]">صفحه محصول</a>
-                            <a href="./../blog/index.html" class="hover:text-[#00B4D8]">وبلاگ</a>
+                            <a href="#" class="hover:text-[#00B4D8]">وبلاگ</a>
                             <a href="#" class="hover:text-[#00B4D8]">برند ها</a>
                             <a href="#" class="hover:text-[#00B4D8]">پیشنهادهای ویژه</a>
                             <a href="./../contact-us/index.html" class="hover:text-[#00B4D8]">تماس با ما</a>
@@ -471,497 +520,430 @@
                         </div>
                     </div> 
                 </div>
-                <a class="hover:text-red-500 transition-all duration-100 ease" href="./../blog/index.html">وبلاگ</a>
+                <a class="hover:text-red-500 transition-all duration-100 ease" href="#">وبلاگ</a>
                 <a class="hover:text-red-500 transition-all duration-100 ease" href="#">دیگر نمونه کار ها</a>
             </div>
         </div>
-        <header class="w-full h-auto py-5 text-white px-3 mb-24">
-            <div class="w-full flex flex-col md:flex-row md:items-start items-center justify-center">
-                <div class="flex flex-col gap-y-7 w-full md:gap-y-12">
-                    <div class="w-full flex items-center bg-gray-100 rounded-md h-12 md:max-w-[375px] relative">
-                        <button onclick="openSelect()" class="w-fit px-5 text-gray-900">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-three-dots-vertical" viewBox="0 0 16 16">
-                                <path d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
-                            </svg>
-                        </button>
-                        <input 
-                            type="text" 
-                            class="bg-transparent w-full text-gray-900 h-full p-1 hover:border-none hover:outline-none" 
-                            placeholder="جستجو در محصولات" 
-                            />
-                        <button class="w-fit px-5 text-gray-900">
-                            <svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                            </svg>
-                        </button>
-                        <div 
-                            id="select_drop_down" 
-                            data-collapse="false"
-                            class="hidden w-[200px] h-auto py-4 rounded flex-col absolute bg-white top-12 text-black shadow-xl">
-                            <input type="text" class="w-auto focus:outline-none bg-gray-100 rounded mx-2 text-gray-900"/>
-                            <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">همه</button>
-                            <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">مد و پوشاک</button>
-                            <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">کالای دیجیتال</button>
-                            <button onclick="openSelect()" class="hover:text-[#00b4d8] self-start mr-2">ارایشی و سلامت</button>
+        <main class="flex flex-col gap-y-16 mt-8">
+            <section class="w-full h-auto px-3">
+                <div class="rounded-3xl overflow-hidden w-full h-auto">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img class="rounded-3xl w-full h-auto" src="./../img/banner-blog1.jpg" alt="Slider Photo" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="rounded-3xl w-full h-auto" src="./../img/banner-blog1.jpg" alt="Slider Photo" />
+                            </div>
                         </div>
+                        <div class="swiper-button-next !text-black !bg-white rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-button-prev !text-black !bg-white rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
-                    <div class="text-gray-600">
-                        <h2>
-                            شرکت گارانتی محصولات
-                        </h2>
-                    </div>
-                    <div class="">
-                        <h1 class="text-black font-bold transition-all duration-300 ease-in-out text-xl xs:text-2xl md:!text-3xl">
-                            گارانتی با تکنسین های مجرب مشکل دستگاه شما را سریع حل میکنند.
-                        </h1>
-                    </div>
-                    <button class="px-7 py-3 rounded bg-[#00B4D8] hover:bg-[#48CAE4] transition-all duration-200 text-white max-w-fit">درخواست مشاوره</button>
                 </div>
+            </section>
+            <section class="w-full h-auto px-3 flex flex-col gap-y-7">
                 <div class="w-full h-auto">
-                    <img 
-                        src="./../img/heroimage.jpg" 
-                        alt="hero-image"
-                        class="w-full h-auto"
-                        />
+                    <h3 class="text-2xl text-gray-700">آخرین مطالب</h3>
                 </div>
-            </div>
-        </header>
-        <main class="flex flex-col gap-y-24">
-            <section class="flex flex-col gap-y-5 justify-center items-center w-full h-auto">
-                <h3 class="text-2xl font-bold">خدمات ما</h3>
-                <h4 class="text-md font-medium text-gray-400">با خدمات شرکت گارانتی محصولات آشنا شویم</h4>
-                <div class="flex flex-wrap w-full gap-y-3">
-                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
-                        <div class="w-full flex flex-col gap-y-4 rounded shadow-xl p-4">
-                            <span>
-                                <img 
-                                    width="50px"
-                                    height="50px" 
-                                    src="./../img/worldinbasket.svg" 
-                                    alt="world in bucket" 
-                                    />
-                            </span>
-                            <a href="#" class="w-fit">
-                                ارسال به تمامی شهرها
-                            </a>
-                            <p class="text-gray-500 text-sm">
-                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                            </p>
-                            <a 
-                                href="#" 
-                                class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#00B4D8] hover:scale-125 transition-all duration-200 ease-in-out">
-                               <span>مشاهده</span> 
-                               <span class="mt-1">
-                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                    </svg>
-                               </span> 
-                            </a>
-                        </div>
-                    </div>
-                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
-                        <div class="w-full flex flex-col gap-y-4 rounded shadow-xl p-4">
-                            <span>
-                                <img 
-                                    width="50px"
-                                    height="50px" 
-                                    src="./../img/locationcar.svg" 
-                                    alt="world in bucket" 
-                                    />
-                            </span>
-                            <a href="#" class="w-fit">
-                                امکان تحویل اکسپرس
-                            </a>
-                            <p class="text-gray-500 text-sm">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                            </p>
-                            <a 
-                                href="#" 
-                                class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#00B4D8] hover:scale-125 transition-all duration-200 ease-in-out">
-                               <span>مشاهده</span> 
-                               <span class="mt-1">
-                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                    </svg>
-                               </span> 
-                            </a>
-                        </div>
-                    </div>
-                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
-                        <div class="w-full flex flex-col gap-y-4 rounded shadow-xl p-4">
-                            <span>
-                                <img 
-                                    width="50px"
-                                    height="50px" 
-                                    src="./../img/creditpay.svg" 
-                                    alt="world in bucket" 
-                                    />
-                            </span>
-                            <a href="#" class="w-fit">
-                                امکان پرداخت در محل
-                            </a>
-                            <p class="text-gray-500 text-sm">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                            </p>
-                            <a 
-                                href="#" 
-                                class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#00B4D8] hover:scale-125 transition-all duration-200 ease-in-out">
-                               <span>مشاهده</span> 
-                               <span class="mt-1">
-                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                    </svg>
-                               </span> 
-                            </a>
-                        </div>
-                    </div>
-                    <div class="w-full px-2 xs:w-1/2 lg:!w-1/4">
-                        <div class="w-full flex flex-col gap-y-4 rounded shadow-xl p-4">
-                            <span>
-                                <img 
-                                    width="50px"
-                                    height="50px" 
-                                    src="./../img/ooriginal.svg" 
-                                    alt="world in bucket" 
-                                    />
-                            </span>
-                            <a href="#" class="w-fit">
-                                ضمانت اصل بودن کالا
-                            </a>
-                            <p class="text-gray-500 text-sm">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است
-                            </p>
-                            <a 
-                                href="#" 
-                                class="w-fit flex items-center gap-x-2 text-gray-500 hover:text-[#00B4D8] hover:scale-125 transition-all duration-200 ease-in-out">
-                               <span>مشاهده</span> 
-                               <span class="mt-1">
-                                    <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                    </svg>
-                               </span> 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="flex flex-col gap-y-5 justify-center items-center w-full h-auto">
-                <h3 class="text-2xl font-bold">محصولات ما</h3>
-                <h4 class="text-md font-medium text-gray-400">با محصولات آشنا شویم</h4>
-                <div id="product_container" class="w-full flex flex-wrap gap-y-2">
-                    <div class="w-full h-auto px-2 md:w-1/2">
-                        <div 
-                            class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
-                            <a 
-                                href="#" 
-                                class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
-                                <img 
-                                    class="w-[105px] h-[105px]"
-                                    src="./../img/product1.jpg" 
-                                    alt="product photo" 
-                                    />
-                            </a>
-                            <div class="w-full flex justify-between items-center">
-                                <div class="flex flex-col gap-y-2">
-                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">
-                                        آیپد مینی 2021 ظرفیت 64 گیگابایت
-                                    </a>
-                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">
-                                        2021 Apple iPad Mini (Wi-Fi, 64GB)
-                                    </a>
-                                    <div class="flex gap-x-3">
-                                        <span 
-                                            class="bg-[#00B4D8] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
-                                            7%
+                <div class="w-full h-auto flex flex-col lg:flex-row gap-3">
+                    <div class="w-full h-auto flex flex-col gap-y-4">
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
                                     </div>
                                 </div>
-                                <a 
-                                    href="#" 
-                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#00B4D8] hover:bg-[#00B4D8] hover:text-white">
-                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                </a>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full h-auto px-2 md:w-1/2">
-                        <div 
-                            class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
-                            <a 
-                                href="#" 
-                                class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
-                                <img 
-                                    class="w-[105px] h-[105px]"
-                                    src="./../img/product5.jpg" 
-                                    alt="product photo" 
-                                    />
-                            </a>
-                            <div class="w-full flex justify-between items-center">
-                                <div class="flex flex-col gap-y-2">
-                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">
-                                        آیپد مینی 2021 ظرفیت 64 گیگابایت
-                                    </a>
-                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">
-                                        2021 Apple iPad Mini (Wi-Fi, 64GB)
-                                    </a>
-                                    <div class="flex gap-x-3">
-                                        <span 
-                                            class="bg-[#00B4D8] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
-                                            7%
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog2.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
                                     </div>
                                 </div>
-                                <a 
-                                    href="#" 
-                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#00B4D8] hover:bg-[#00B4D8] hover:text-white">
-                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                </a>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full h-auto px-2 md:w-1/2">
-                        <div class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
-                            <a href="#" class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
-                                <img 
-                                    class="w-[105px] h-[105px]"
-                                    src="./../img/product3.jpg" 
-                                    alt="product photo" 
-                                    />
-                            </a>
-                            <div class="w-full flex justify-between items-center">
-                                <div class="flex flex-col gap-y-2">
-                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">
-                                        آیپد مینی 2021 ظرفیت 64 گیگابایت
-                                    </a>
-                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">
-                                        2021 Apple iPad Mini (Wi-Fi, 64GB)
-                                    </a>
-                                    <div class="flex gap-x-3">
-                                        <span 
-                                            class="bg-[#00B4D8] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
-                                            7%
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog3.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
                                     </div>
                                 </div>
-                                <a 
-                                    href="#" 
-                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#00B4D8] hover:bg-[#00B4D8] hover:text-white">
-                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                </a>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full h-auto px-2 md:w-1/2">
-                        <div 
-                            class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
-                            <a 
-                                href="#" 
-                                class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
-                                <img 
-                                    class="w-[105px] h-[105px]"
-                                    src="./../img/product6.jpg" 
-                                    alt="product photo" 
-                                    />
-                            </a>
-                            <div class="w-full flex justify-between items-center">
-                                <div class="flex flex-col gap-y-2">
-                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">
-                                        آیپد مینی 2021 ظرفیت 64 گیگابایت
-                                    </a>
-                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">
-                                        2021 Apple iPad Mini (Wi-Fi, 64GB)
-                                    </a>
-                                    <div class="flex gap-x-3">
-                                        <span
-                                            class="bg-[#00B4D8] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
-                                            7%
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog4.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
                                     </div>
                                 </div>
-                                <a 
-                                    href="#" 
-                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#00B4D8] hover:bg-[#00B4D8] hover:text-white">
-                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                </a>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full h-auto px-2 md:w-1/2">
-                        <div 
-                            class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
-                            <a 
-                                href="#" 
-                                class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
-                                <img 
-                                    class="w-[105px] h-[105px]"
-                                    src="./../img/product7.jpg" 
-                                    alt="product photo" 
-                                    />
-                            </a>
-                            <div class="w-full flex justify-between items-center">
-                                <div class="flex flex-col gap-y-2">
-                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">
-                                        آیپد مینی 2021 ظرفیت 64 گیگابایت
-                                    </a>
-                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">
-                                        2021 Apple iPad Mini (Wi-Fi, 64GB)
-                                    </a>
-                                    <div class="flex gap-x-3">
-                                        <span 
-                                            class="bg-[#00B4D8] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
-                                            7%
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog2.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
                                     </div>
                                 </div>
-                                <a 
-                                    href="#" 
-                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#00B4D8] hover:bg-[#00B4D8] hover:text-white">
-                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                </a>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="w-full h-auto px-2 md:w-1/2">
-                        <div 
-                            class="flex flex-col-reverse xs:flex-row gap-2 bg-[#f7f7f7] overflow-hidden p-3 rounded-3xl w-full h-auto">
-                            <a 
-                                href="#" 
-                                class="w-fit md:min-w-fit xs:p-0 p-2 self-center bg-white overflow-hidden rounded-3xl flex justify-center items-center">
-                                <img 
-                                    class="w-[105px] h-[105px]"
-                                    src="./../img/product2.jpg" 
-                                    alt="product photo" 
-                                    />
-                            </a>
-                            <div class="w-full flex justify-between items-center">
-                                <div class="flex flex-col gap-y-2">
-                                    <a href="#" class="text-black text-sm xs:text-md lg:!text-lg font-semibold">
-                                        آیپد مینی 2021 ظرفیت 64 گیگابایت
-                                    </a>
-                                    <a href="#" class="text-gray-400 text-xs xs:text-sm lg:!text-md">
-                                        2021 Apple iPad Mini (Wi-Fi, 64GB)
-                                    </a>
-                                    <div class="flex gap-x-3">
-                                        <span 
-                                            class="bg-[#00B4D8] text-white rounded-3xl flex items-center justify-center px-2 text-xs xs:text-sm lg:!text-md">
-                                            7%
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog3.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
                                         </span>
-                                        <span class="text-xs xs:text-sm lg:!text-md">تومان46,900,000–تومان49,100,000</span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
                                     </div>
                                 </div>
-                                <a 
-                                    href="#" 
-                                    class="flex items-center justify-center transition-all duration-200 ease-linear w-14 h-14 rounded-3xl bg-white text-[#00B4D8] hover:bg-[#00B4D8] hover:text-white">
-                                    <svg width="25" height="25" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                    </svg>
-                                </a>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-3xl flex flex-col md:flex-row gap-x-3 bg-gray-100 p-4">
+                            <div class="rounded-3xl w-full md:w-[30%] h-auto overflow-hidden">
+                                <img class="w-full" src="./../img/blog4.jpg" alt="Blog Photo" />
+                            </div>
+                            <div class="w-full h-full flex flex-col items-start justify-around py-3">
+                                <div>
+                                    <span class="font-semibold text-gray-600">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                </div>
+                                <div class="flex gap-x-2 text-xs text-gray-500">
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                                        </span>
+                                        <span>مهر 15, 1400</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class="fa fa-user" aria-hidden="true"></i>
+                                        </span>
+                                        <span>admin</span>
+                                    </div>
+                                    <div class="flex gap-x-1">
+                                        <span>
+                                            <i class='fa fa-folder'></i>
+                                        </span>
+                                        <span>هنر و سینما</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm">
+                                        در این مقاله تعدادی از بهترین فیلم‌های انیمیشنی بتمن را معرفی کرده‌ایم که سرشار از داستان‌ها و موقعیت‌ها و شخصیت‌های جذاب و منحصربه‌فرد هستند. به تماشای آن‌ها بنشینید و از داستان‌های جنایی جذابشان...
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <button 
-                    onclick="moreProduct()" 
-                    class="text-black bg-[#f7f7f7] hover:text-white hover:bg-[#00B4D8] p-4 rounded-3xl text-sm transition-all duration-200 ease-in">
-                    محصولات بیشتر...
-                </button>
-            </section>
-            <section class="w-full h-auto bg-[#48CAE4]">
-                <div class="flex flex-col lg:flex-row items-center justify-center">
-                    <div class="w-full lg:w-1/2 h-auto flex flex-col gap-y-4 my-4 items-start px-4 lg:gap-y-10">
-                        <span class="text-black text-lg font-medium">تا سقف ۲۰ میلیون تومان</span>
-                        <span class="text-black text-md font-extrabold">از قسطی خرید کنید</span>
-                        <div class="w-full h-auto gap-y-4 flex flex-col md:flex-row">
-                            <div class="w-full flex flex-col md:flex-row md:gap-x-4 md:justify-start items-center justify-center gap-y-4">
-                                <div class="w-14 h-14 rounded-xl bg-[#023E8A] flex justify-center items-center text-white">
-                                    <svg width="30" height="30" fill="currentColor" class="bi bi-shield-fill-check" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.777 11.777 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7.159 7.159 0 0 0 1.048-.625 11.775 11.775 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.541 1.541 0 0 0-1.044-1.263 62.467 62.467 0 0 0-2.887-.87C9.843.266 8.69 0 8 0zm2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647z"/>
-                                    </svg>
+                    <div class="w-full h-auto flex flex-col gap-y-4 lg:w-[40%]">
+                        <div class="rounded-3xl bg-gray-100 p-4 flex flex-col gap-y-3">
+                            <div><span class="text-sm text-gray-600">دسته ها</span></div>
+                            <div class="text-sm text-gray-500 flex flex-col gap-y-2">
+                                <div class="flex gap-x-2 items-center">
+                                    <span><i class='fa fa-folder'></i></span>
+                                    <span>بازی ویدیویی</span>
                                 </div>
-                                <span class="text-black text-lg font-medium">بدون نیاز به ضامن</span>
-                            </div>
-                            <div class="w-full flex flex-col md:flex-row md:gap-x-4 md:justify-start items-center justify-center gap-y-4">
-                                <div class="w-14 h-14 rounded-xl bg-[#023E8A] flex justify-center items-center text-white">
-                                    <svg width="30" height="30" fill="currentColor" class="bi bi-person-badge-fill" viewBox="0 0 16 16">
-                                        <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm4.5 0a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1h-3zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm5 2.755C12.146 12.825 10.623 12 8 12s-4.146.826-5 1.755V14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-.245z"/>
-                                    </svg>
+                                <div class="flex gap-x-2 items-center">
+                                    <span><i class='fa fa-folder'></i></span>
+                                    <span>سینما و هنر</span>
                                 </div>
-                                <span class="text-black text-lg font-medium">ثبت‌نام غیرحضوری</span>
+                                <div class="flex gap-x-2 items-center">
+                                    <span><i class='fa fa-folder'></i></span>
+                                    <span>علم و تکنولوژی</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="w-full h-auto gap-y-4 flex flex-col md:flex-row">
-                            <div class="w-full flex flex-col md:flex-row md:gap-x-4 md:justify-start items-center justify-center gap-y-4">
-                                <div class="w-14 h-14 rounded-xl bg-[#023E8A] flex justify-center items-center text-white">
-                                    <svg width="30" height="30" fill="currentColor" class="bi bi-credit-card-fill" viewBox="0 0 16 16">
-                                        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1H0V4zm0 3v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7H0zm3 2h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1a1 1 0 0 1 1-1z"/>
-                                    </svg>
+                        <div class="rounded-3xl bg-gray-100 p-4 flex flex-col gap-y-3">
+                            <div><span class="text-sm text-gray-600">آخرین دیدگاه ها</span></div>
+                            <div class="text-sm text-gray-500 flex flex-col gap-y-2">
+                                <div class="flex gap-x-2 items-center">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>ناشناس: در آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
                                 </div>
-                                <span class="text-black text-lg font-medium">سرعت دریافت اعتبار لیزینگ</span>
-                            </div>
-                            <div class="w-full flex flex-col md:flex-row md:gap-x-4 md:justify-start items-center justify-center gap-y-4">
-                                <div class="w-14 h-14 rounded-xl bg-[#023E8A] flex justify-center items-center text-white">
-                                    <svg width="30" height="30" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
-                                        <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
-                                    </svg>
+                                <div class="flex gap-x-2 items-center">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>ناشناس: در آیپد مینی 2021 ظرفیت 64 گیگابایت</span>
                                 </div>
-                                <span class="text-black text-lg font-medium">بازپرداخت راحت و آسان</span>
+                                <div class="flex gap-x-2 items-center">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>ناشناس: در گوشی موبایل اپل مدل iPhone 13 Pro دو سیم‌ </span>
+                                </div>
+                                <div class="flex gap-x-2 items-center">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>فرشاد علیزاده در گوشی موبایل اپل مدل iPhone 13 Pro دو</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div 
-                        id="moving_image_container" 
-                        class="overflow-hidden w-full lg:w-1/2 flex items-center justify-center relative h-72 xs:!h-[370px] lg:!h-full mt-10 lg:mt-0">
-                        <div id="monitor_photo" class="w-[90%] h-[90%] flex items-center justify-center">
-                            <img 
-                            class="h-auto w-[280px] xs:w-[380px] lg:!w-[410px]" 
-                            src="./../img/monitorPhoto.png" 
-                            alt="Monitor Photo" 
-                            />
+                        <div class="rounded-3xl bg-gray-100 p-4 flex flex-col gap-y-3">
+                            <div><span class="text-sm text-gray-600">برچسب‌ها</span></div>
+                            <div class="text-sm text-gray-500 flex flex-col gap-y-2">
+                                <div class="w-full gap-x-1 flex flex-wrap text-sm text-gray-500">
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">FIFA 22</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، Witcher</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، دوچرخه‌سواری</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، کریتوس</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، گیم</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، Witcher</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، دوچرخه‌سواری</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، کریتوس</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، گیم</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، Witcher</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، دوچرخه‌سواری</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، کریتوس</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، گیم</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، Witcher</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، دوچرخه‌سواری</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، کریتوس</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، گیم</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، Witcher</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، دوچرخه‌سواری</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، کریتوس</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، گیم</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، Witcher</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، دوچرخه‌سواری</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، کریتوس</span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">، گیم</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="rounded-3xl bg-gray-100 p-4 flex flex-col gap-y-3">
+                            <div><span class="text-sm text-gray-600">برچسب‌ها</span></div>
+                            <div class="text-sm text-gray-500 flex flex-col gap-y-2">
+                                <div class="w-full flex flex-col gap-y-1 text-sm text-gray-500">
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">
+                                        بهترین فیلم‌های انیمیشنی بتمن و جوکر
+                                    </span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">
+                                        فهرست ۲۲ بازیکن برتر FIFA 22 مشخص شد؛ مسی در صدر
+                                    </span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">
+                                        ۷ قابلیت جدید ویندوز ۱۱ که باید امتحان کنید
+                                    </span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">
+                                        ۵ شخصیت ضعیف تاریخ دنیای تخیلی مارول
+                                    </span>
+                                    <span class="cursor-pointer hover:text-red-400 transition-all duration-200">
+                                        5 شخصیت کچل برتر تاریخ بازی‌های ویدیویی
+                                    </span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="w-full h-auto bg-white">
-                <div class="w-full flex flex-col items-center justify-center py-20 gap-y-12 px-2">
-                    <div class="w-full flex justify-center items-center">
-                        <h4 class="font-bold text-2xl">خبرنامه گارانتی</h4>
-                    </div>
-                    <div class="w-full relative flex justify-center items-center max-w-[443px]">
-                        <button class="absolute rounded py-1 px-3 bg-[#0077B6] hover:bg-[#0096C7] transition-all duration-200 left-2 text-white">عضوم کن</button>
-                        <input 
-                            type="email" 
-                            class="bg-gray-100 h-12 w-full rounded pr-3 focus:border-gray-400 focus:outline-gray-300" 
-                            placeholder="آدرس ایمیل"
-                            />
-                    </div>
+            <section class="w-full h-auto px-3">
+                <div class="w-full h-auto mb-3">
+                    <h3 class="text-2xl text-gray-700">آخرین مطالب</h3>
                 </div>
-                <div class="">
-                    <svg class="rotate-180" viewBox="0 0 283.5 19.6" preserveAspectRatio="none">
-                        <path class="elementor-shape-fill fill-gray-100" style="opacity:0.33" d="M0 0L0 18.8 141.8 4.1 283.5 18.8 283.5 0z"></path>
-                        <path class="elementor-shape-fill fill-gray-200" style="opacity:0.33" d="M0 0L0 12.6 141.8 4 283.5 12.6 283.5 0z"></path>
-                        <path class="elementor-shape-fill fill-gray-300" style="opacity:0.33" d="M0 0L0 6.4 141.8 4 283.5 6.4 283.5 0z"></path>
-                        <path class="elementor-shape-fill fill-[#edecec]" d="M0 0L0 1.2 141.8 4 283.5 1.2 283.5 0z"></path>
-                    </svg>
+                <div class="overflow-hidden w-full h-auto">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide w-1/4 min-w-[310px] pl-3">
+                                <div class="gap-y-2 py-2 rounded-2xl bg-gray-100 flex items-center justify-center flex-col">
+                                    <p class="self-start mr-4 my-3">5 شخصیت ضعیف دنیای مارول</p>
+                                    <img class="rounded-3xl w-[280px]" src="./../img/blog.jpg" alt="Discount Photo" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-1/4 min-w-[310px] pl-3">
+                                <div class="gap-y-2 py-2 rounded-2xl bg-gray-100 flex items-center justify-center flex-col">
+                                    <p class="self-start mr-4 my-3">5 شخصیت ضعیف دنیای مارول</p>
+                                    <img class="rounded-3xl w-[280px]" src="./../img/blog2.jpg" alt="Discount Photo" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-1/4 min-w-[310px] pl-3">
+                                <div class="gap-y-2 py-2 rounded-2xl bg-gray-100 flex items-center justify-center flex-col">
+                                    <p class="self-start mr-4 my-3">5 شخصیت ضعیف دنیای مارول</p>
+                                    <img class="rounded-3xl w-[280px]" src="./../img/blog3.jpg" alt="Discount Photo" />
+                                </div>
+                            </div>
+                            <div class="swiper-slide w-1/4 min-w-[310px] pl-3">
+                                <div class="gap-y-2 py-2 rounded-2xl bg-gray-100 flex items-center justify-center flex-col">
+                                    <p class="self-start mr-4 my-3">5 شخصیت ضعیف دنیای مارول</p>
+                                    <img class="rounded-3xl w-[280px]" src="./../img/blog4.jpg" alt="Discount Photo" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next !text-black !bg-white rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-button-prev !text-black !bg-white rounded-xl w-12 h-12 after:text-[20px]"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer>
+        <footer class="mt-10">
             <section class="w-full bg-[#edecec] py-7 px-2">
                 <div class="w-full flex flex-col lg:flex-row lg:justify-between gap-y-7">
                     <div class="flex flex-col gap-y-4 lg:w-1/2">
@@ -1050,40 +1032,89 @@
                     </div>
                 </div>
             </section>
-            <section class="w-full bg-white">
-                <div class="w-full flex flex-col gap-y-4 lg:flex-row p-4">
-                    <div class="w-full flex flex-col gap-y-5 px-4">
-                        <span class="text-gray-600 text-xl">فروشگاه قابل اعمتاد است</span>
-                        <div>
-                            <p class="text-gray-500">
-                                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت
-                            </p>
+            <section class="w-full h-auto flex flex-col md:flex-row">
+                <div class="w-full md:w-1/2 bg-[#edecec]">
+                    <div class="w-full flex flex-col gap-y-4 p-4">
+                        <div class="w-full flex flex-col gap-y-5 px-4">
+                            <span class="text-gray-600 text-xl">فروشگاه قابل اعمتاد است</span>
+                            <div>
+                                <p class="text-gray-500">
+                                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت
+                                </p>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col gap-y-5 px-4">
+                            <span class="text-gray-600 text-xl">با ، آنلاین و ارزان خرید کنید</span>
+                            <div class="w-full flex flex-wrap items-center justify-around">
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="./../img/mellat.png" alt="Trust Photo" />
+                                </a>
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="./../img/zarrinpal.png" alt="Trust Photo" />
+                                </a>
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="./../img/mojazkasb.png" alt="Trust Photo" />
+                                </a>
+                                <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
+                                    <img src="./../img/neshanmelli.png" alt="Trust Photo" />
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="w-full flex flex-col gap-y-5 px-4">
-                        <span class="text-gray-600 text-xl">با ، آنلاین و ارزان خرید کنید</span>
-                        <div class="w-full flex flex-wrap items-center justify-around">
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="./../img/mellat.png" alt="Trust Photo" />
-                            </a>
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="./../img/zarrinpal.png" alt="Trust Photo" />
-                            </a>
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="./../img/mojazkasb.png" alt="Trust Photo" />
-                            </a>
-                            <a href="#" class="w-1/2 flex justify-center items-center md:w-1/4 p-3">
-                                <img src="./../img/neshanmelli.png" alt="Trust Photo" />
-                            </a>
+                </div>
+                <div class="w-full md:w-1/2 bg-[#edecec]">
+                    <div class="w-full h-full flex flex-col justify-between gap-y-3 p-4">
+                        <div class="w-full flex flex-col gap-y-3">
+                            <span class="text-xl">همراه با ما</span>
+                            <div class="flex w-full justify-around">
+                                <div class="flex flex-col gap-y-3 text-sm">
+                                    <a href="#">تماس با ما</a>
+                                    <a href="#">درباره ما</a>
+                                    <a href="#">وبلاگ</a>
+                                </div>
+                                <div class="flex flex-col gap-y-3 text-sm">
+                                    <a href="#">امکان پرداخت در محل</a>
+                                    <a href="#">امکان تحویل اکسپرس</a>
+                                    <a href="#">پرسش های متداول</a>
+                                </div>
+                                <div class="flex flex-col gap-y-3 text-sm">
+                                    <a href="#">امکان پرداخت در محل</a>
+                                    <a href="#">امکان تحویل اکسپرس</a>
+                                    <a href="#">پرسش های متداول</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-col gap-y-3">
+                            <span class="text-xl">همراه با ما</span>
+                            <span class="text-md">با عضویت در خبرنامه از آخرین اخبار و محصولات سایت با خبر شوید...</span>
+                            <div>
+                                <div class="w-full relative flex justify-center items-center">
+                                    <button 
+                                        class="absolute rounded py-1 px-3 bg-[#0077B6] hover:bg-[#0096C7] transition-all duration-200 left-2 text-white">
+                                        عضوم کن
+                                    </button>
+                                    <input 
+                                        type="email" 
+                                        class="bg-white h-12 w-full rounded pr-3 focus:border-gray-400 focus:outline-gray-300" 
+                                        placeholder="آدرس ایمیل"
+                                        />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex justify-between text-sm">
+                            <a href="#">sinamohamadi317@gmail.com</a>
+                            <a href="#">09015165671</a>
+                            <a href="#">ایران مشهد</a>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="w-full text-center py-4 flex items-center justify-center bg-[#edecec]">
+            <section class="w-full py-4 flex items-center justify-center text-center bg-[#edecec]">
                 <span class="text-gray-500">کلیه حقوق مادی و معنوی این سایت متعلق به سایت می باشد.</span>
             </section>
         </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="./js/index.js"></script>
     </body>
 

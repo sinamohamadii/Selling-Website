@@ -93,3 +93,39 @@ const interval = setInterval(function () {
 }, 3000);
 
 
+/* sliders */
+let headerSwiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+});
+
+let blogSwiper = new Swiper(".mySwiper2", {
+    slidesPerView: "auto",
+    spaceBetween: 5,
+    loop: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false
+    },
+});
+

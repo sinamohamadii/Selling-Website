@@ -94,49 +94,45 @@ function openSelect() {
 }
 
 /* sliders */
-let headerSwiper = new Swiper(".mySwiper", {
-    slidesPerView: 1,
+let swiper = new Swiper(".mySwiper", {
+    spaceBetween: 10,
+    slidesPerView: 4,
+    freeMode: true,
+    watchSlidesProgress: true,
+});
+let swiper2 = new Swiper(".mySwiper2", {
     spaceBetween: 30,
-    loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
-    autoplay: {
-        delay: 5000,
-        disableOnInteraction: false
+    thumbs: {
+        swiper: swiper,
     },
 });
-
-
-let discountSwiper = new Swiper(".mySwiper2", {
-    spaceBetween: 30,
-    slidesPerView: 'auto',
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-
-
 let productSwiper = new Swiper(".mySwiper3", {
     spaceBetween: 30,
     slidesPerView: 'auto',
     loop: true,
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
 });
-
+let swiper4 = new Swiper(".mySwiper4", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    loop: true,
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+});
 
 /* discount countdown */
 let countDownDate = new Date("August 25, 2022 15:37:25").getTime();
@@ -175,3 +171,71 @@ let x = setInterval(function () {
         document.getElementById("demo").innerHTML = "EXPIRED";
     }
 }, 1000);
+
+/* use to collapse more dscription box */
+const moreBox = document.querySelector("#description_box");
+const shadowBox = document.querySelector("#shadow_box");
+let moreBoxCollapse = moreBox.dataset.collapse;
+
+function collpaseDescription(el) {
+
+    if (moreBoxCollapse === "close") {
+
+        el.innerText = "کمتر";
+        shadowBox.classList.add("hidden");
+        moreBox.classList.add("!h-auto");
+        moreBoxCollapse = "open";
+
+    } else {
+
+        el.innerText = "بیشتر...";
+        shadowBox.classList.remove("hidden");
+        moreBoxCollapse = "close";
+        moreBox.classList.remove("!h-auto");
+
+    }
+
+}
+
+/* use to change tabs */
+const tabs = document.querySelectorAll(".tab");
+const tabButtons = document.querySelectorAll(".tab-btn");
+
+function changeTab(n) {
+
+    let i;
+    for (i = 0; i < tabs.length; i++) {
+        replaceClass(tabs[i], "block", "hidden");
+        tabButtons[i].classList.remove("active-product-tab");
+    }
+
+    replaceClass(tabs[n - 1], "hidden", "block");
+    tabButtons[n - 1].classList.add("active-product-tab");
+
+}
+
+
+/* use to open more in description */
+
+
+function collapseMore(el) {
+
+    let content = el.nextElementSibling;
+
+    if (content.dataset.toggle === "false") {
+        replaceClass(content, "hidden", "flex");
+        content.dataset.toggle = "true";
+        el.children[0].innerText = "-";
+        el.children[0].classList.remove("bg-gray-100");
+        el.classList.remove("bg-white");
+    }
+
+    else if (content.dataset.toggle === "true") {
+        replaceClass(content, "flex", "hidden");
+        content.dataset.toggle = "false";
+        el.children[0].innerText = "+";
+        el.children[0].classList.add("bg-gray-100");
+        el.classList.add("bg-white");
+    }
+
+}

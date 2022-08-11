@@ -30,12 +30,8 @@ body {
     background: linear-gradient(45deg, rgba(99, 198, 243, 1) 0%, rgba(48, 167, 225, 1) 100%);
 }
 
-.swiper-pagination-bullet{
-    background-color: white !important;
-    opacity: 50% !important;
-}
 
-.swiper-pagination-bullet-active{
-    background-color: white !important;
-    opacity: 90% !important;
+.active-product-tab{
+    color: #ef4444 !important;
+    background-color: rgb(255, 238, 238) !important;
 }

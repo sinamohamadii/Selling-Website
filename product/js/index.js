@@ -239,3 +239,91 @@ function collapseMore(el) {
     }
 
 }
+
+/* user to scroll between tags */
+
+let scrollBtn = document.querySelectorAll(".scroll-btn");
+
+function scrollTag(n) {
+
+    let id = n;
+
+    let i;
+    for (i = 0; i < scrollBtn.length; i++) {
+        scrollBtn[i].classList.remove("acrive-scroll-tab");
+    }
+
+    document.getElementById(id).scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    scrollBtn[n - 1].classList.add("acrive-scroll-tab");
+
+}
+
+window.onscroll = function (event) {
+    let scroll = window.pageYOffset;
+
+    console.log(scroll);
+    if (scroll <= 1573) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[0].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 1909) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[1].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 2245) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[2].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 2581) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[3].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 2917) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[4].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 3253) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[5].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 3589) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[6].classList.add("acrive-scroll-tab");
+
+    }
+    else if (scroll <= 3925) {
+
+        for (i = 0; i < scrollBtn.length; i++) {
+            scrollBtn[i].classList.remove("acrive-scroll-tab");
+        }
+        scrollBtn[7].classList.add("acrive-scroll-tab");
+
+    }
+}
